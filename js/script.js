@@ -12,16 +12,15 @@ var settings = {
     }
 };
 
-//response here means all the api information that is sent back
+//restdb api response
 $.ajax(settings).done(function (response) {
 
     var studentListContent = $("#studentListContent");
-    //students data
     for (var i = 0; i < response.length; i++) {
         var skater_name = response[i].skater_name;
         var skate_level = response[i].skate_level;
         var skaterCard = `
-                <div class="card" style="width:12rem;">
+                <div class="card" style="width:15rem;">
                     <div class="card-body">    
                         <a href="#" class="update" id="${skater_name}">${skater_name}</a>
                         <p>${skate_level}</p>
@@ -30,29 +29,28 @@ $.ajax(settings).done(function (response) {
             </div>
         </div>`;
         studentListContent.append(skaterCard);
-        
     }
-    //add rows to the table
     console.log(response);
 });
 
 //create event listener whenever user clicks on student hyperlink
-$(".update").on("click",function(e){
+$(".update").on("click", function(e){
     e.preventDefault();
     console.log("skaterName" + $(this).attr("skaterName"));
 });
 
-//add a new student
-
+//adding new skater
 $("#btnSubmit").on("click", function (e) {
     e.preventDefault();
-    //if empty show error
-    if ($("#skate_level").val() === "") {
-        //show error
+    if (($("#age").val() === "") || ($("#gender").val() === "")) {
+        alert("required fields are empty");
     }
+    else {
+        alert("Submission Successful")
+};
     
     var skateLevel = $("#skate_level").val();
-    var skaterName = `${$("#skater_family").val()}_${$("#skater_given").val()}`;
+    var skaterName = `${$("#skater_family").val()} ${$("#skater_given").val()}`;
     var skaterAge = $("#age").val();
     var skaterGender = $("#gender").val();
     var skaterHeight = $("#height").val();
