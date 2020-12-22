@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SDP Score Sheet Form</title>
+        <meta name="description" content="TES">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <nav class="container-fluid navbar">
+            <h2>SDP Score Sheet Form</h2>
+            <a class="btn btn-md btn-warning" href="index.html">Skater Profiles</a>
+        </nav>
+        <div class="mainbody">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="SkaterName">Last Name</label>
+                        <input type="text" class="form-control" id="skater_family" placeholder="family name"></input>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="SkaterName">First Name</label>
+                        <input type="text" class="form-control" id="skater_given" placeholder="given name"></input>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="mr-sm-1" for="age">Age</label>
+                        <input type="text" class="form-control" id="age" placeholder="years"></input>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="mr-sm-1" for="gender">Gender</label>
+                        <input type="text" class="form-control" id="gender" placeholder="M/F"></input>
+                    </div>
+                </div>
+                <div class="form-row align-items-center">
+                    <div class="col-md-3">
+                        <label class="mr-sm-1" for="skate_level">Skating Level:</label>
+                        <select class="custom-select mr-sm-1" id="skate_level" name="SkateLevel">
+                            <option value="preliminary">Preliminary</option>
+                            <option value="elementary">Elementary</option>
+                            <option value="basic novice">Novice - Basic</option>
+                            <option value="intermediate novice">Novice - Intermediate</option>
+                            <option value="advance novice">Novice - Advance</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                        </select><br>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="mr-sm-2" for="height">Height:</label>
+                        <input type="text" class="form-control" id="height" placeholder="cm"></input>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="mr-sm-2" for="left_leg_length">Leg Length (L):</label>
+                        <input type="text" class="form-control" id="left_leg_length" placeholder="cm"></input>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="mr-sm-2" for="right_leg_length">Leg Length (R):</label>
+                        <input type="text" class="form-control" id="right_leg_length" placeholder="cm"></input>
+                    </div>
+                </div>
+                <hr>
+                <div id="fat">
+                    <h2>Fitness Assessment and Testing Scores</h2>
+                    <div class="form-row">
+                        <h5>Power &amp; Strength</h5>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="SingleLegBound">Single Leg Bound</label>
+                            <input type="float" class="form-control" id="single_leg_bound_left_score" placeholder="left leg (cm)"></input>
+                            <input type="float" class="form-control" id="single_leg_bound_right_score" placeholder="right leg (cm)"></input>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="VerticalJump">Vertical Jump</label>
+                            <input type="float" class="form-control" id="vertical_jump_score" placeholder="cm"></input>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="PushUp">Timed Push Up</label>
+                            <input type="float" class="form-control" id="push_up_score" placeholder="count"></input>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="TuckJump">Timed Tuck Jump</label>
+                            <input type="float" class="form-control" id="tuck_jump_score" placeholder="count"></input>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <h5>Agility, Balance &amp; Coordination</h5>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="HexJump">Hex Jump</label>
+                            <input type="float" class="form-control" id="hex_jump_score" placeholder="time (s)"></input>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="SidePlank">Side Plank</label>
+                            <input type="float" class="form-control" id="side_plank_score" placeholder="max 120s"></input>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Spiral Balance">Spiral Balance</label>
+                            <input type="float" class="form-control" id="spiral_balance_score" placeholder="max 120s"></input>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="BentKneeVUp">Bent Knee V-Up</label>
+                            <input type="float" class="form-control" id="bent_knee_v_up_score" placeholder="count"></input>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <h5>Flexibility</h5>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="FrontSplit">Front Split</label>
+                            <input type="float" class="form-control" id="front_split_left_score" placeholder="left (cm)"></input>
+                            <input type="float" class="form-control" id="front_split_right_score" placeholder="right (cm)"></input>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="StandingSpiral">Standing Spiral</label>
+                            <input type="float" class="form-control" id="standing_spiral_score" placeholder="cm"></input>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="SeatedReach">Seated Reach</label>
+                            <input type="float" class="form-control" id="seated_reach_score" placeholder="cm"></input>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="LumbarExtension">Lumbar Extension</label>
+                            <input type="float" class="form-control" id="lumbar_extension_score" placeholder="cm"></input>
+                        </div>
+                    </div>
+                </div>     
+                <button type="submit" id="btnSubmit" value="submit" class="btn btn-warning">Submit</button>
+                <button type="reset" id="btnReset" value="reset" class="btn btn-warning">Reset</button>
+            </form>
+            <hr>
+            <div id="fatscore">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="PowerStrength">Power &amp; Strength</label>
+                            <input type="float" class="form-control" id="power_strength_score" placeholder="score"></input>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="Flexibility">Flexibility</label>
+                            <input type="float" class="form-control" id="flexibility_score" placeholder="score"></input>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="AgilityBalanceCoordination">Agility, Balance &amp; Coordination</label>
+                            <input type="float" class="form-control" id="agility_balance_coordination_score" placeholder="score"></input>
+                        </div>
+                    </div>
+                </div>   
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
