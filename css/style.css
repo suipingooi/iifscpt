@@ -12,5 +12,9 @@
     padding: 30px;
 }
 .card, .card-title, .card-text {
-    color: blue;
+    color: rgb(52, 179, 166);
+    margin: 15px;
+    padding: 5
+    px;
+
 }
