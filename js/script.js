@@ -51,6 +51,7 @@ $("#btnSubmit").on("click", function (e) {
     var skateLevel = $("#skate_level").val();
     var skaterName = `${$("#skater_family").val()}_${$("#skater_given").val()}`;
     var skaterAge = $("#age").val();
+    var skaterGender = $("#gender").val();
     var skaterHeight = $("#height").val();
     var legLengthR = $("right_leg_length").val();
     var legLengthL = $("left_leg_length").val();
@@ -75,6 +76,7 @@ $("#btnSubmit").on("click", function (e) {
         "skater_name": skaterName,
         "skate_level": skateLevel,
         "age": skaterAge,
+        "gender": skaterGender,
         "height": skaterHeight,
         "right_leg_length": legLengthR,
         "left_leg_length": legLengthL,
