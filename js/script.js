@@ -20,14 +20,17 @@ $.ajax(settings).done(function (response) {
     for (var i = 0; i < response.length; i++) {
         var skater_name = response[i].skater_name;
         var skate_level = response[i].skate_level;
-        var flexibility_score = response[i].flexibility_score;
-        var studentDetails = `
-            <tr>
-            <td><a href="#" class="update" id="${skater_name}">${skater_name}</a></td>
-            <td>${skate_level}</td>
-            <td>${flexibility_score}</td>
-            </tr>`;
-        studentListContent.append(studentDetails);
+        var skaterCard = `
+                <div class="card" style="width:12rem;">
+                    <div class="card-body">    
+                        <a href="#" class="update" id="${skater_name}">${skater_name}</a>
+                        <p>${skate_level}</p>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+        studentListContent.append(skaterCard);
+        
     }
     //add rows to the table
     console.log(response);
