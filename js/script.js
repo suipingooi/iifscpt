@@ -10,7 +10,7 @@ var settings = {
       "x-apikey": "5fdd6af7ff9d670638140729",
       "cache-control": "no-cache"
     }
-}
+};
 
 //response here means all the api information that is sent back
 $.ajax(settings).done(function (response) {
@@ -112,7 +112,7 @@ $("#btnSubmit").on("click", function (e) {
     },
     "processData": false,
     "data": JSON.stringify(jsondata)
-}
+};
 
 function evaluatePowerStrength() {
     
