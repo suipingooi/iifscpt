@@ -11,7 +11,6 @@ var settings = {
       "cache-control": "no-cache"
     }
 };
-
 //restdb api response
 $.ajax(settings).done(function (response) {
 
@@ -48,7 +47,7 @@ $("#btnSubmit").on("click", function (e) {
     else {
         alert("Submission Successful")
 };
-    
+
     var skateLevel = $("#skate_level").val();
     var skaterName = `${$("#skater_family").val()} ${$("#skater_given").val()}`;
     var skaterAge = $("#age").val();
@@ -81,15 +80,18 @@ $("#btnSubmit").on("click", function (e) {
         "height": skaterHeight,
         "right_leg_length": legLengthR,
         "left_leg_length": legLengthL,
+        // power & strenght
         "single_leg_bound_left_score": singleLegBoundL,
         "single_leg_bound_right_score": singleLegBoundR,
         "vertical_jump_score": verticalJump,
         "push_up_score": pushUp,
         "tuck_jump_score": tuckJump,
+        // agility, balance & coordination
         "hex_jump_score": hexJump,
         "side_plank_score": sidePlank,
         "spiral_balance_score": spiralBalance,
         "bent_knee_v_up_score": bentKneeVUp,
+        // flexibility
         "front_split_left_score": frontSplitL,
         "front_split_right_score": frontSplitR,
         "standing_spiral_score": standingSpiral,
@@ -110,11 +112,7 @@ $("#btnSubmit").on("click", function (e) {
     },
     "processData": false,
     "data": JSON.stringify(jsondata)
-};
-
-function evaluatePowerStrength() {
-    
-}
+};   
 
     //this done is the creation of new information
     $.ajax(settings).done(function (response) {
@@ -145,8 +143,6 @@ function updateTable() {
         //add rows to the table
         console.log(response);
     });
-}
-
-
+};
 
 });
