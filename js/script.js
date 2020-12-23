@@ -24,9 +24,7 @@ $.ajax(settings).done(function (response) {
                         <a href="#" class="update" id="${skater_name}">${skater_name}</a>
                         <p>${skate_level}</p>
                     </div>
-                </div>
-            </div>
-        </div>`;
+                </div>`;
         studentListContent.append(skaterCard);
     }
     console.log(response);
@@ -114,35 +112,68 @@ $("#btnSubmit").on("click", function (e) {
     "data": JSON.stringify(jsondata)
 };   
 
+$("#studentform")[0].reset();
+
     //this done is the creation of new information
     $.ajax(settings).done(function (response) {
         console.log(response);
-        updateTable();
+        updateStudentList();
     });
 });
 
-function updateTable() {
-    //function to update table again
+function updateStudentList() {
+    //function to update card list
     $.ajax(settings).done(function (response) {
 
         var studentListContent = $("#studentListContent");
         studentListContent.html();
-        //student_name 
-        //student_location
-        //student_id
+        
         for (var i = 0; i < response.length; i++) {
             var skater_name = response[i].skater_name;
             var skate_level = response[i].skate_level;
-            var studentDetails = `
-            <tr>
-            <td>${skater_name}</td>
-            <td>${skate_level}</td>
-            </tr>`;
-            studentListContent.append(studentDetails);
+            var skaterCard = `
+                <div class="card" style="width:15rem;">
+                    <div class="card-body">    
+                        <a href="#" class="update" id="${skater_name}">${skater_name}</a>
+                        <p>${skate_level}</p>
+                    </div>
+                </div>`;
+            studentListContent.append(skaterCard);
         }
-        //add rows to the table
+        //add card
         console.log(response);
     });
 };
 
 });
+
+function evaluateFlexibility() {
+
+    $.ajax(settings).done(function (flexibilityScore) {
+        
+    var flexibilityScore = $("flexibility_score");
+    flexibilityScore.html();
+
+    var maxStandingSpiral = ($("right_leg_length").val()) + ($("left_leg_length").val());
+    var hypotenuse = Math.SQRT1_2(($("right_leg_length").val())*2 + ($("left_leg_length").val())*2);
+    
+    if (($("standing_spiral_score").val()) === maxStandingSpiral) {
+        flexibilityScore += 5;
+    }
+    else if (($("standing_spiral_score").val()) >= 1.75*hypotenuse) {
+        flexibilityScore += 4;
+    }
+    else if (($("standing_spiral_score").val()) >= 1.5*hypotenuse) {
+        flexibilityScore += 3;
+    }
+    else if (($("standing_spiral_score").val()) >= 1.25*hypotenuse) {
+        flexibilityScore += 2;
+    }
+    else {
+        flexibilityScore += 1;
+    }
+    return flexibilityScore;
+});
+    console.log(flexibilityScore);
+};
+
