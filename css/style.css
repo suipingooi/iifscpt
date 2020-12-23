@@ -1,19 +1,22 @@
 
 .navbar {
-    height: 15vh;
-    background-color: rgb(52, 179, 166);
+    height: 90px;
+    background-color:#FBC107;
     color: white;
     padding: 30px;
 }
 .mainbody {
     height: 100%;
-    background-color: gray;
+    background-color: black;
     color: white;
     padding: 30px;
 }
 .card {
-    color: rgb(52, 179, 166);
+    background-color: white;
+    color: gray;
     margin: 15px;
     font-size: 18px;
-
+}
+.btn {
+    width: 180px;
 }
