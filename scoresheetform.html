@@ -31,20 +31,20 @@
                     </div>
                     <div class="col-md-1">
                         <label class="mr-sm-1" for="gender">Gender</label>
-                        <input type="text" class="form-control" id="gender" placeholder="M/F"></input>
+                        <input type="text" class="form-control" id="gender" placeholder="m/f"></input>
                     </div>
                 </div>
                 <div class="form-row align-items-center">
                     <div class="col-md-3">
                         <label class="mr-sm-1" for="skate_level">Skating Level:</label>
                         <select class="custom-select mr-sm-1" id="skate_level" name="SkateLevel">
-                            <option value="preliminary">Preliminary</option>
-                            <option value="elementary">Elementary</option>
-                            <option value="basic novice">Novice - Basic</option>
-                            <option value="intermediate novice">Novice - Intermediate</option>
-                            <option value="advance novice">Novice - Advance</option>
-                            <option value="junior">Junior</option>
-                            <option value="senior">Senior</option>
+                            <option value="Preliminary">Preliminary</option>
+                            <option value="Elementary">Elementary</option>
+                            <option value="Basic Novice">Novice - Basic</option>
+                            <option value="Intermediate Novice">Novice - Intermediate</option>
+                            <option value="Advance Novice">Novice - Advance</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Senior">Senior</option>
                         </select><br>
                     </div>
                     <div class="col-md-2">
@@ -77,11 +77,11 @@
                             <input type="float" class="form-control" id="vertical_jump_score" placeholder="cm"></input>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="PushUp">Timed Push Up</label>
+                            <label for="PushUp">Push Up (30sec)</label>
                             <input type="float" class="form-control" id="push_up_score" placeholder="count"></input>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="TuckJump">Timed Tuck Jump</label>
+                            <label for="TuckJump">Tuck Jump (30sec)</label>
                             <input type="float" class="form-control" id="tuck_jump_score" placeholder="count"></input>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                             <input type="float" class="form-control" id="spiral_balance_score" placeholder="max 120s"></input>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="BentKneeVUp">Bent Knee V-Up</label>
+                            <label for="BentKneeVUp">Bent Knee V-Up (30sec)</label>
                             <input type="float" class="form-control" id="bent_knee_v_up_score" placeholder="count"></input>
                         </div>
                     </div>
@@ -133,22 +133,6 @@
                 <button type="reset" id="btnReset" value="reset" class="btn btn-warning">Reset</button>
             </form>
             <hr>
-            <div id="fatscore">
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="PowerStrength">Power &amp; Strength</label>
-                            <h4 id="power_strength_score"></h4>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="Flexibility">Flexibility</label>
-                            <h4 id="flexibilityScore"></h4>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="AgilityBalanceCoordination">Agility, Balance &amp; Coordination</label>
-                            <h4 id="agility_balance_coordination_score"></h4>
-                        </div>
-                    </div>
-                </div>   
         </div>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>

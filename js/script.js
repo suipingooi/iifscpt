@@ -148,7 +148,7 @@ function updateStudentList() {
 });
 
 function evaluateFlexibility() {
-
+    // function to compile flexibility score
     $.ajax(settings).done(function (flexibilityScore) {
         
     var flexibilityScore = $("flexibility_score");
@@ -176,4 +176,3 @@ function evaluateFlexibility() {
 });
     console.log(flexibilityScore);
 };
-

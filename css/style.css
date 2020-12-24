@@ -19,4 +19,18 @@
 }
 .btn {
     width: 180px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.form-control {
+    margin: 5px;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+#fat label {
+    font-style: italic;
 }
