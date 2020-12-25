@@ -21,7 +21,7 @@ $.ajax(settings).done(function (response) {
         var skaterCard = `
                 <div class="card" style="width:15rem;">
                     <div class="card-body">    
-                        <a href="#" class="update" id="${skater_name}">${skater_name}</a>
+                        <a href="skaterprofile.html" class="update" id="${skater_name}">${skater_name}</a>
                         <p>${skate_level}</p>
                     </div>
                 </div>`;
@@ -31,22 +31,22 @@ $.ajax(settings).done(function (response) {
 });
 
 //create event listener whenever user clicks on student hyperlink
-$(".update").on("click", function(e){
-    e.preventDefault();
-    console.log("skaterName" + $(this).attr("skaterName"));
-});
+// $(".update").on("click", function(e){
+//     e.preventDefault();
+//     console.log("skaterName" + $(this).attr("skaterName"));
+// });
 
 //adding new skater
 $("#btnSubmit").on("click", function (e) {
     e.preventDefault();
-    if (((($("#skater_family").val()) && ($("#skater_given").val())) === "" ) ||
-        ($("#age").val() === "")) {
+    if ((($("#skater_family").val() === "") && ($("#skater_given").val() === "")) || (($("#age").val() === ""))) {
         alert("required fields are empty");
     }
     else {
         alert("Submission Successful")
 };
 
+    $("#skater_family").val($("#skater_family").val().toUpperCase());
     var skateLevel = $("#skate_level").val();
     var skaterName = `${$("#skater_family").val()} ${$("#skater_given").val()}`;
     var skaterAge = $("#age").val();
@@ -75,7 +75,6 @@ $("#btnSubmit").on("click", function (e) {
         "skater_name": skaterName,
         "skate_level": skateLevel,
         "age": skaterAge,
-        "gender": skaterGender,
         "height": skaterHeight,
         "right_leg_length": legLengthR,
         "left_leg_length": legLengthL,
@@ -120,6 +119,7 @@ $("#studentform")[0].reset();
         console.log(response);
         updateStudentList();
     });
+
 });
 
 function updateStudentList() {
@@ -144,6 +144,7 @@ function updateStudentList() {
         //add card
         console.log(response);
     });
+    location.href="index.html";
 };
 
 });
