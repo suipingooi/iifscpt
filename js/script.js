@@ -39,7 +39,8 @@ $(".update").on("click", function(e){
 //adding new skater
 $("#btnSubmit").on("click", function (e) {
     e.preventDefault();
-    if (($("#age").val() === "") || ($("#gender").val() === "")) {
+    if (((($("#skater_family").val()) && ($("#skater_given").val())) === "" ) ||
+        ($("#age").val() === "")) {
         alert("required fields are empty");
     }
     else {
@@ -49,12 +50,11 @@ $("#btnSubmit").on("click", function (e) {
     var skateLevel = $("#skate_level").val();
     var skaterName = `${$("#skater_family").val()} ${$("#skater_given").val()}`;
     var skaterAge = $("#age").val();
-    var skaterGender = $("#gender").val();
     var skaterHeight = $("#height").val();
     var legLengthR = $("#right_leg_length").val();
     var legLengthL = $("#left_leg_length").val();
     var singleLegBoundL = $("#single_leg_bound_left_score").val();
-    var singleLegBoundR = $("#ssingle_leg_bound_right_score").val();
+    var singleLegBoundR = $("#single_leg_bound_right_score").val();
     var verticalJump = $("#vertical_jump_score").val();
     var pushUp = $("#push_up_score").val();
     var tuckJump = $("#tuck_jump_score").val();
@@ -67,6 +67,7 @@ $("#btnSubmit").on("click", function (e) {
     var standingSpiral = $("#standing_spiral_score").val();
     var seatedReach = $("#seated_reach_score").val();
     var lumbarExtension = $("#lumbar_extension_score").val();
+
 
     //data to be sent to the restdb 
 
@@ -111,7 +112,7 @@ $("#btnSubmit").on("click", function (e) {
     "processData": false,
     "data": JSON.stringify(jsondata)
 };   
-evaluateFlexibility()
+
 $("#studentform")[0].reset();
 
     //this done is the creation of new information
@@ -151,8 +152,8 @@ function evaluateFlexibility() {
     // function to compile flexibility score
     $.ajax(settings).done(function (response) {
 
-    var maxStandingSpiral = ($("#right_leg_length").val()) + ($("left_leg_length").val());
-    var hypotenuse = Math.SQRT1_2(($("#right_leg_length").val())*2 + ($("left_leg_length").val())*2);
+    var maxStandingSpiral = ($("#right_leg_length").val()) + ($("#left_leg_length").val());
+    var hypotenuse = Math.SQRT1_2(($("#right_leg_length").val())*2 + ($("#left_leg_length").val())*2);
     
     if (($("#standing_spiral_score").val()) === maxStandingSpiral) {
         flexibilityScore += 5;
