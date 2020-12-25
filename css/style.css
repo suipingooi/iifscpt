@@ -1,8 +1,10 @@
-
+body {
+    background-color: black;
+}
 .navbar {
     height: 90px;
     background-color:#FBC107;
-    color: white;
+    color: black;
     padding: 30px;
     font-family: 'Julius Sans One', sans-serif;
 }
@@ -17,10 +19,11 @@ h2 {
     font-family: 'Montserrat', sans-serif;
 }
 .card {
-    background-color: white;
+    background-color:white;
     color: gray;
     margin: 15px;
     font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
 }
 .btn {
     width: 150px;
@@ -28,6 +31,10 @@ h2 {
     padding: 5px;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
+}
+
+input::placeholder {
+    font-size: small;
 }
 
 .form-control {
