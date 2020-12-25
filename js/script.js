@@ -51,8 +51,8 @@ $("#btnSubmit").on("click", function (e) {
     var skaterAge = $("#age").val();
     var skaterGender = $("#gender").val();
     var skaterHeight = $("#height").val();
-    var legLengthR = $("right_leg_length").val();
-    var legLengthL = $("left_leg_length").val();
+    var legLengthR = $("#right_leg_length").val();
+    var legLengthL = $("#left_leg_length").val();
     var singleLegBoundL = $("#single_leg_bound_left_score").val();
     var singleLegBoundR = $("#ssingle_leg_bound_right_score").val();
     var verticalJump = $("#vertical_jump_score").val();
@@ -64,9 +64,9 @@ $("#btnSubmit").on("click", function (e) {
     var bentKneeVUp = $("#bent_knee_v_up_score").val();
     var frontSplitL = $("#front_split_left_score").val();
     var frontSplitR = $("#front_split_right_score").val();
-    var standingSpiral = $("standing_spiral_score").val();
-    var seatedReach = $("seated_reach_score").val();
-    var lumbarExtension = $("lumbar_extension_score").val();
+    var standingSpiral = $("#standing_spiral_score").val();
+    var seatedReach = $("#seated_reach_score").val();
+    var lumbarExtension = $("#lumbar_extension_score").val();
 
     //data to be sent to the restdb 
 
@@ -111,7 +111,7 @@ $("#btnSubmit").on("click", function (e) {
     "processData": false,
     "data": JSON.stringify(jsondata)
 };   
-
+evaluateFlexibility()
 $("#studentform")[0].reset();
 
     //this done is the creation of new information
@@ -149,30 +149,28 @@ function updateStudentList() {
 
 function evaluateFlexibility() {
     // function to compile flexibility score
-    $.ajax(settings).done(function (flexibilityScore) {
-        
-    var flexibilityScore = $("flexibility_score");
-    flexibilityScore.html();
+    $.ajax(settings).done(function (response) {
 
-    var maxStandingSpiral = ($("right_leg_length").val()) + ($("left_leg_length").val());
-    var hypotenuse = Math.SQRT1_2(($("right_leg_length").val())*2 + ($("left_leg_length").val())*2);
+    var maxStandingSpiral = ($("#right_leg_length").val()) + ($("left_leg_length").val());
+    var hypotenuse = Math.SQRT1_2(($("#right_leg_length").val())*2 + ($("left_leg_length").val())*2);
     
-    if (($("standing_spiral_score").val()) === maxStandingSpiral) {
+    if (($("#standing_spiral_score").val()) === maxStandingSpiral) {
         flexibilityScore += 5;
     }
-    else if (($("standing_spiral_score").val()) >= 1.75*hypotenuse) {
+    else if (($("#standing_spiral_score").val()) >= 1.75*hypotenuse) {
         flexibilityScore += 4;
     }
-    else if (($("standing_spiral_score").val()) >= 1.5*hypotenuse) {
+    else if (($("#standing_spiral_score").val()) >= 1.5*hypotenuse) {
         flexibilityScore += 3;
     }
-    else if (($("standing_spiral_score").val()) >= 1.25*hypotenuse) {
+    else if (($("#standing_spiral_score").val()) >= 1.25*hypotenuse) {
         flexibilityScore += 2;
     }
     else {
         flexibilityScore += 1;
     }
+    console.log(response);
     return flexibilityScore;
+
 });
-    console.log(flexibilityScore);
-};
+}
