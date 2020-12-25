@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Skater Developmental Profiling System</title>
+        <meta name="description" content="Skater Profile">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <nav class="container-fluid navbar">
+            <h2>Skater Developmental Profiling System</h2>
+            <div>
+                <a class="btn btn-md btn-success" href="index.html">Skater Profiles</a>
+            </div>
+        </nav>
+        <div class="mainbody">
+            <div class="row card-body justify-content-center" id="skaterProfile"></div>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
+
+var skaterProfile = `
+        <div class="card" style="width:30rem;">
+            <div class="card-body">    
+                <h3 id="${skater_name}">${skater_name}</h3>
+                <p>${skate_level}</p>
+                <div id="fatscore">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="PowerStrength">Power &amp; Strength</label>
+                            <h4 id="power_strength_score"></h4>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="Flexibility">Flexibility</label>
+                            <h4 id="flexibilityScore"></h4>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="AgilityBalanceCoordination">Agility, Balance &amp; Coordination</label>
+                            <h4 id="agility_balance_coordination_score"></h4>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>`;
+        console.log(skaterProfile)
+
