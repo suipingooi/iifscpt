@@ -4,12 +4,17 @@
     background-color:#FBC107;
     color: white;
     padding: 30px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+h2 {
+    font-size: 22px;
 }
 .mainbody {
     height: 100%;
     background-color: black;
     color: white;
     padding: 30px;
+    font-family: 'Montserrat', sans-serif;
 }
 .card {
     background-color: white;
@@ -18,9 +23,11 @@
     font-size: 18px;
 }
 .btn {
-    width: 180px;
+    width: 150px;
     margin: 5px;
     padding: 5px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .form-control {
@@ -33,4 +40,7 @@ h3 {
 
 #fat label {
     font-style: italic;
+}
+.custom-select {
+    background-color:#FBC107;
 }
