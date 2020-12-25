@@ -14,7 +14,7 @@ var settings = {
 //restdb api response
 $.ajax(settings).done(function (response) {
 
-    var studentListContent = $("#studentListContent");
+    var skaterListContent = $("#skaterListContent");
     for (var i = 0; i < response.length; i++) {
         var skater_name = response[i].skater_name;
         var skate_level = response[i].skate_level;
@@ -25,18 +25,13 @@ $.ajax(settings).done(function (response) {
                         <p>${skate_level}</p>
                     </div>
                 </div>`;
-        studentListContent.append(skaterCard);
+        skaterListContent.append(skaterCard);
     }
     console.log(response);
 });
 
-//create event listener whenever user clicks on student hyperlink
-// $(".update").on("click", function(e){
-//     e.preventDefault();
-//     console.log("skaterName" + $(this).attr("skaterName"));
-// });
-
-//adding new skater
+//SDP Scoresheet Form
+//adding new skater and fitness data
 $("#btnSubmit").on("click", function (e) {
     e.preventDefault();
     if ((($("#skater_family").val() === "") && ($("#skater_given").val() === "")) || (($("#age").val() === ""))) {
@@ -67,10 +62,72 @@ $("#btnSubmit").on("click", function (e) {
     var standingSpiral = $("#standing_spiral_score").val();
     var seatedReach = $("#seated_reach_score").val();
     var lumbarExtension = $("#lumbar_extension_score").val();
-
-
+    
+    evaluateFlexibility()
+    
+    //function to evaluate flexibility
+    function evaluateFlexibility() {
+    var flexibilityScore = 0;
+    var legLengthR = parseInt($("#right_leg_length").val());
+    var legLengthL = parseInt($("#left_leg_length").val());
+    var maxSplit = parseInt($("#right_leg_length").val()) + parseInt($("#left_leg_length").val());
+    var hypotenuse = Math.sqrt((legLengthL*legLengthL)+(legLengthR*legLengthR));
+        //standingSpiral
+    var standingSpiral = parseInt($("#standing_spiral_score").val());
+        if (standingSpiral === maxSplit) {
+          flexibilityScore += 5;
+            }
+            else if (standingSpiral >= hypotenuse) {
+                flexibilityScore += 4;
+            }
+            else if (standingSpiral >= 0.75*hypotenuse) {
+                flexibilityScore += 3;
+            }
+            else if (standingSpiral >= 0.5*hypotenuse) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore += 1;
+            }
+        //lumbarExtension
+    var lumbarExtension = parseInt($("#lumbar_extension_score").val());
+        if (lumbarExtension === 0) {
+                flexibilityScore += 5;
+            }
+            else if (lumbarExtension  <=15) {
+                flexibilityScore += 4;
+            }
+            else if (lumbarExtension  <=30) {
+                flexibilityScore += 3;
+            }
+            else if (lumbarExtension  <=50) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore += 1;
+            }
+        //frontSplit
+    var averageSplit = ((frontSplitL + frontSplitR)/2);
+        if (averageSplit === maxSplit) {
+                flexibilityScore += 5;
+            }
+            else if (averageSplit >= 0.75*maxSplit) {
+                flexibilityScore += 4;
+            }
+            else if (averageSplit >= 0.5*maxSplit) {
+                flexibilityScore += 3;
+            }
+            else if (averageSplit >= 0.25*maxSplit) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore += 1;
+            }
+    console.log(flexibilityScore)
+    return flexibilityScore
+        //seatedReach
+    }; 
     //data to be sent to the restdb 
-
     var jsondata = {
         "skater_name": skaterName,
         "skate_level": skateLevel,
@@ -114,20 +171,20 @@ $("#btnSubmit").on("click", function (e) {
 
 $("#studentform")[0].reset();
 
-    //this done is the creation of new information
+    //addition of new skater data to skater list
     $.ajax(settings).done(function (response) {
         console.log(response);
-        updateStudentList();
+        updateSkaterList();
     });
 
 });
 
-function updateStudentList() {
-    //function to update card list
+function updateSkaterList() {
+    //function to update skater list
     $.ajax(settings).done(function (response) {
 
-        var studentListContent = $("#studentListContent");
-        studentListContent.html();
+        var skaterListContent = $("#skaterListContent");
+        skaterListContent.html();
         
         for (var i = 0; i < response.length; i++) {
             var skater_name = response[i].skater_name;
@@ -139,7 +196,7 @@ function updateStudentList() {
                         <p>${skate_level}</p>
                     </div>
                 </div>`;
-            studentListContent.append(skaterCard);
+            skaterListContent.append(skaterCard);
         }
         //add card
         console.log(response);
@@ -149,30 +206,3 @@ function updateStudentList() {
 
 });
 
-function evaluateFlexibility() {
-    // function to compile flexibility score
-    $.ajax(settings).done(function (response) {
-
-    var maxStandingSpiral = ($("#right_leg_length").val()) + ($("#left_leg_length").val());
-    var hypotenuse = Math.SQRT1_2(($("#right_leg_length").val())*2 + ($("#left_leg_length").val())*2);
-    
-    if (($("#standing_spiral_score").val()) === maxStandingSpiral) {
-        flexibilityScore += 5;
-    }
-    else if (($("#standing_spiral_score").val()) >= 1.75*hypotenuse) {
-        flexibilityScore += 4;
-    }
-    else if (($("#standing_spiral_score").val()) >= 1.5*hypotenuse) {
-        flexibilityScore += 3;
-    }
-    else if (($("#standing_spiral_score").val()) >= 1.25*hypotenuse) {
-        flexibilityScore += 2;
-    }
-    else {
-        flexibilityScore += 1;
-    }
-    console.log(response);
-    return flexibilityScore;
-
-});
-}
