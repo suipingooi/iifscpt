@@ -62,12 +62,12 @@ $("#btnSubmit").on("click", function (e) {
     var standingSpiral = $("#standing_spiral_score").val();
     var seatedReach = $("#seated_reach_score").val();
     var lumbarExtension = $("#lumbar_extension_score").val();
-    
-    evaluateFlexibility()
+
     
     //function to evaluate flexibility
     function evaluateFlexibility() {
     var flexibilityScore = 0;
+    var skaterAge = parseInt($("#age").val());
     var legLengthR = parseInt($("#right_leg_length").val());
     var legLengthL = parseInt($("#left_leg_length").val());
     var maxSplit = parseInt($("#right_leg_length").val()) + parseInt($("#left_leg_length").val());
@@ -123,10 +123,155 @@ $("#btnSubmit").on("click", function (e) {
             else {
                 flexibilityScore += 1;
             }
-    console.log(flexibilityScore)
-    return flexibilityScore
         //seatedReach
+    var seatedReach = parseInt($("#seated_reach_score").val());
+        if (skaterAge === 15 || skaterAge === 19) {
+            if (seatedReach > 45) {
+                flexibilityScore += 5;
+            }
+            else if (seatedReach >= 43) {
+                flexibilityScore += 4;
+            }
+            else if (seatedReach >= 39) {
+                flexibilityScore += 3;
+            }
+            else if (seatedReach >= 35) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore +=1;
+            }
+        }
+        else if (skaterAge >= 16 && skaterAge <= 19) {
+            if (seatedReach > 46) {
+                flexibilityScore += 5;
+            }
+            else if (seatedReach >= 44) {
+                flexibilityScore += 4;
+            }
+            else if (seatedReach >= 40) {
+                flexibilityScore += 3;
+            }
+            else if (seatedReach >= 36) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore +=1;
+            }
+        }
+        else if (skaterAge === 14) {
+            if (seatedReach > 43) {
+                flexibilityScore += 5;
+            }
+            else if (seatedReach >= 41) {
+                flexibilityScore += 4;
+            }
+            else if (seatedReach >= 38) {
+                flexibilityScore += 3;
+            }
+            else if (seatedReach >= 34) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore +=1;
+            }
+        }
+        else if (skaterAge === 13) {
+            if (seatedReach > 41) {
+                flexibilityScore += 5;
+            }
+            else if (seatedReach >= 39) {
+                flexibilityScore += 4;
+            }
+            else if (seatedReach >= 36) {
+                flexibilityScore += 3;
+            }
+            else if (seatedReach >= 32) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore +=1;
+            }
+        }
+        else if (skaterAge === 12) {
+            if (seatedReach > 39) {
+                flexibilityScore += 5;
+            }
+            else if (seatedReach >= 37) {
+                flexibilityScore += 4;
+            }
+            else if (seatedReach >= 34) {
+                flexibilityScore += 3;
+            }
+            else if (seatedReach >= 30) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore +=1;
+            }
+        }
+        else if (skaterAge === 11) {
+            if (seatedReach > 37) {
+                flexibilityScore += 5;
+            }
+            else if (seatedReach >= 35) {
+                flexibilityScore += 4;
+            }
+            else if (seatedReach >= 32) {
+                flexibilityScore += 3;
+            }
+            else if (seatedReach >= 28) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore +=1;
+            }
+        }
+        else if (skaterAge === 10) {
+            if (seatedReach > 35) {
+                flexibilityScore += 5;
+            }
+            else if (seatedReach >= 33) {
+                flexibilityScore += 4;
+            }
+            else if (seatedReach >= 30) {
+                flexibilityScore += 3;
+            }
+            else if (seatedReach >= 26) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore +=1;
+            }
+        }
+        else if (skaterAge <= 9) {
+            if (seatedReach > 33) {
+                flexibilityScore += 5;
+            }
+            else if (seatedReach >= 31) {
+                flexibilityScore += 4;
+            }
+            else if (seatedReach >= 28) {
+                flexibilityScore += 3;
+            }
+            else if (seatedReach >= 24) {
+                flexibilityScore += 2;
+            }
+            else {
+                flexibilityScore +=1;
+            }
+        }
+    return flexibilityScore
     }; 
+    
+    // function to evaluate agility, balance and coordination (ABC)
+    function evaluateABC() {
+
+    }
+    // powerStrengthScore
+    // agilityBalanceCoordinationScore = evaluateABC();
+    flexibilityScore = evaluateFlexibility();
+    
     //data to be sent to the restdb 
     var jsondata = {
         "skater_name": skaterName,
@@ -147,6 +292,7 @@ $("#btnSubmit").on("click", function (e) {
         "spiral_balance_score": spiralBalance,
         "bent_knee_v_up_score": bentKneeVUp,
         // flexibility
+        "flexibility_score": flexibilityScore,
         "front_split_left_score": frontSplitL,
         "front_split_right_score": frontSplitR,
         "standing_spiral_score": standingSpiral,
