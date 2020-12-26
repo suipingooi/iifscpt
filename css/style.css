@@ -19,18 +19,19 @@ h2 {
     font-family: 'Montserrat', sans-serif;
 }
 .card {
-    background-color:rgb(175, 238, 249);
+    background-color: aliceblue;
     color: gray;
     margin: 15px;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
 }
 .btn {
-    width: 150px;
+    width: 140px;
     margin: 5px;
     padding: 5px;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
+    font-size: small;
 }
 
 input::placeholder {
@@ -49,7 +50,7 @@ h3 {
     font-style: italic;
 }
 .photo {
-    max-width: 200px;
+    max-width: 180px;
 }
 .footer {
     color: white;
