@@ -264,7 +264,7 @@ $("#btnSubmit").on("click", function (e) {
     return flexibilityScore;
     }; 
     
-    // function to evaluate agility, balance and coordination (ABC)
+    //function to evaluate agility, balance and coordination (ABC)
     function evaluateABC() {
     var ABCScore = 0;
     var skaterAge = parseInt($("#age").val());
@@ -565,10 +565,444 @@ $("#btnSubmit").on("click", function (e) {
     return ABCScore;
     };
     
-    // function to evaluate power & strength
+    //function to evaluate power & strength
     function evaluatePowerStrength() {
     var PSScore = 0;
-
+    var skaterAge = parseInt($("#age").val());
+        //singleLegBound
+    var singleLegBoundL = parseInt($("#single_leg_bound_left_score").val());
+    var singleLegBoundR = parseInt($("#single_leg_bound_right_score").val());
+    var averageBound = (singleLegBoundL + singleLegBoundR)/2
+        if (skaterAge === 19) {
+            if (averageBound > 97) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 93) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 87) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 83) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 18) {
+            if (averageBound > 96) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 92) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 87) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 83) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 17) {
+            if (averageBound > 94) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 91) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 86) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 81) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 16) {
+            if (averageBound > 93) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 89) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 85) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 79) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 15) {
+            if (averageBound > 91) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 87) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 83) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 78) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 14) {
+            if (averageBound > 88) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 85) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 80) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 76) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 13) {
+            if (averageBound > 85) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 81) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 77) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 71) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 12) {
+            if (averageBound > 83) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 80) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 75) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 70) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 11) {
+            if (averageBound > 82) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 78) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 74) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 68) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 10) {
+            if (averageBound > 80) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 76) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 72) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 67) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge <= 9) {
+            if (averageBound > 79) {
+                PSScore += 5;
+            }
+            else if (averageBound >= 74) {
+                PSScore += 4;
+            }
+            else if (averageBound >= 70) {
+                PSScore += 3;
+            }
+            else if (averageBound >= 65) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        //tuckJump
+    var tuckJump = parseInt($("#tuck_jump_score").val());
+        if (skaterAge >= 17 && skaterAge <= 19) {
+            if (tuckJump > 15) {
+                PSScore += 5;
+            }
+            else if (tuckJump = 15) {
+                PSScore += 4;
+            }
+            else if (tuckJump >= 13) {
+                PSScore += 3;
+            }
+            else if (tuckJump >= 11) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 16 || skaterAge === 15) {
+            if (tuckJump > 15) {
+                PSScore += 5;
+            }
+            else if (tuckJump >= 14) {
+                PSScore += 4;
+            }
+            else if (tuckJump >= 12) {
+                PSScore += 3;
+            }
+            else if (tuckJump >= 10) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 14 || skaterAge === 13) {
+            if (tuckJump > 15) {
+                PSScore += 5;
+            }
+            else if (tuckJump >= 14) {
+                PSScore += 4;
+            }
+            else if (tuckJump >= 11) {
+                PSScore += 3;
+            }
+            else if (tuckJump >= 9) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 12) {
+            if (tuckJump > 15) {
+                PSScore += 5;
+            }
+            else if (tuckJump >= 13) {
+                PSScore += 4;
+            }
+            else if (tuckJump >= 11) {
+                PSScore += 3;
+            }
+            else if (tuckJump >= 8) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 11) {
+            if (tuckJump > 14) {
+                PSScore += 5;
+            }
+            else if (tuckJump >= 12) {
+                PSScore += 4;
+            }
+            else if (tuckJump >= 10) {
+                PSScore += 3;
+            }
+            else if (tuckJump >= 8) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 10) {
+            if (tuckJump > 14) {
+                PSScore += 5;
+            }
+            else if (tuckJump >= 13) {
+                PSScore += 4;
+            }
+            else if (tuckJump >= 10) {
+                PSScore += 3;
+            }
+            else if (tuckJump >= 7) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge <= 9) {
+            if (tuckJump > 13) {
+                PSScore += 5;
+            }
+            else if (tuckJump >= 12) {
+                PSScore += 4;
+            }
+            else if (tuckJump >= 10) {
+                PSScore += 3;
+            }
+            else if (tuckJump >= 7) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        //verticalJump
+    var verticalJump = parseInt($("#vertical_jump_score").val());
+        if (verticalJump >= 50) {
+            PSScore += 5;
+        }
+        else if (verticalJump >= 40) {
+            PSScore += 4;
+        }
+        else if (verticalJump >= 30) {
+            PSScore += 3;
+        }
+        else if (verticalJump >= 20) {
+            PSScore += 2;
+        }
+        else {
+            PSScore += 1;
+        }
+        //pushUp
+    var pushUp = parseInt($("#push_up_score").val());
+        if (skaterAge === 19 || skaterAge === 18) {
+            if (pushUp > 14) {
+                PSScore += 5;
+            }
+            else if (pushUp >= 13) {
+                PSScore += 4;
+            }
+            else if (pushUp >= 10) {
+                PSScore += 3;
+            }
+            else if (pushUp >= 7) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 17 || skaterAge === 16) {
+            if (pushUp > 14) {
+                PSScore += 5;
+            }
+            else if (pushUp >= 12) {
+                PSScore += 4;
+            }
+            else if (pushUp >= 9) {
+                PSScore += 3;
+            }
+            else if (pushUp >= 6) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge >= 13 && skaterAge <= 15) {
+            if (pushUp > 13) {
+                PSScore += 5;
+            }
+            else if (pushUp >= 12) {
+                PSScore += 4;
+            }
+            else if (pushUp >= 9) {
+                PSScore += 3;
+            }
+            else if (pushUp >= 6) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 12) {
+            if (pushUp > 12) {
+                PSScore += 5;
+            }
+            else if (pushUp >= 10) {
+                PSScore += 4;
+            }
+            else if (pushUp >= 8) {
+                PSScore += 3;
+            }
+            else if (pushUp >= 6) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge === 11) {
+            if (pushUp > 12) {
+                PSScore += 5;
+            }
+            else if (pushUp >= 11) {
+                PSScore += 4;
+            }
+            else if (pushUp >= 8) {
+                PSScore += 3;
+            }
+            else if (pushUp >= 5) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+        else if (skaterAge <= 10) {
+            if (pushUp > 10) {
+                PSScore += 5;
+            }
+            else if (pushUp >= 9) {
+                PSScore += 4;
+            }
+            else if (pushUp >= 6) {
+                PSScore += 3;
+            }
+            else if (pushUp >= 4) {
+                PSScore += 2;
+            }
+            else {
+                PSScore +=1;
+            }
+        }
+    return PSScore
     };
 
     PSScore = evaluatePowerStrength();
