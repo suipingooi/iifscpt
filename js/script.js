@@ -91,7 +91,7 @@ $("#btnSubmit").on("click", function (e) {
             }
         //lumbarExtension
     var lumbarExtension = parseInt($("#lumbar_extension_score").val());
-        if (lumbarExtension === 0) {
+        if (lumbarExtension <= 10) {
                 flexibilityScore += 5;
             }
             else if (lumbarExtension  <=15) {
