@@ -142,7 +142,7 @@ $("#btnSubmit").on("click", function (e) {
                 flexibilityScore +=1;
             }
         }
-        else if (skaterAge >= 16 && skaterAge <= 19) {
+        else if (skaterAge >= 16 && skaterAge < 19) {
             if (seatedReach > 46) {
                 flexibilityScore += 5;
             }
@@ -261,15 +261,314 @@ $("#btnSubmit").on("click", function (e) {
                 flexibilityScore +=1;
             }
         }
-    return flexibilityScore
+    return flexibilityScore;
     }; 
     
     // function to evaluate agility, balance and coordination (ABC)
     function evaluateABC() {
+    var ABCScore = 0;
+    var skaterAge = parseInt($("#age").val());
 
-    }
-    // powerStrengthScore
-    // agilityBalanceCoordinationScore = evaluateABC();
+        //spiralBalance
+    var spiralBalance = parseInt($("#spiral_balance_score").val());
+        if (spiralBalance >= 100) {
+        ABCScore += 5;
+        }
+        else if (spiralBalance >= 60) {
+            ABCScore += 4;
+        }
+        else if (spiralBalance >= 45) {
+            ABCScore += 3;
+        }
+        else if (spiralBalance >= 30) {
+            ABCScore += 2;
+        }
+        else {
+            ABCScore += 1;
+        }
+        //sidePlank
+    var sidePlank = parseInt($("#side_plank_score").val());    
+        if (sidePlank >= 100) {
+        ABCScore += 5;
+        }
+        else if (sidePlank >= 60) {
+            ABCScore += 4;
+        }
+        else if (sidePlank >= 45) {
+            ABCScore += 3;
+        }
+        else if (sidePlank >= 30) {
+            ABCScore += 2;
+        }
+        else {
+            ABCScore += 1;
+        }
+        //hexJump
+    var hexJump = parseInt($("#hex_jump_score").val());
+        if (skaterAge >= 16 && skaterAge <= 19) {
+            if (hexJump < 11.3) {
+                ABCScore += 5;
+            }
+            else if (hexJump >= 11.3) {
+                ABCScore += 4;
+            }
+            else if (hexJump >= 11.6) {
+                ABCScore += 3;
+            }
+            else if (hexJump >= 11.9 && hexJump <= 12.2) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge === 15) {
+            if (hexJump < 11.3) {
+                ABCScore += 5;
+            }
+            else if (hexJump >= 11.3) {
+                ABCScore += 4;
+            }
+            else if (hexJump >= 11.7) {
+                ABCScore += 3;
+            }
+            else if (hexJump >= 12.1 && hexJump <= 12.5) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge === 14) {
+            if (hexJump < 11.3) {
+                ABCScore += 5;
+            }
+            else if (hexJump >= 11.3) {
+                ABCScore += 4;
+            }
+            else if (hexJump >= 11.7) {
+                ABCScore += 3;
+            }
+            else if (hexJump >= 12.3 && hexJump <= 12.8) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge === 13 || skaterAge === 12) {
+            if (hexJump < 11.5) {
+                ABCScore += 5;
+            }
+            else if (hexJump >= 11.5) {
+                ABCScore += 4;
+            }
+            else if (hexJump >= 12.0) {
+                ABCScore += 3;
+            }
+            else if (hexJump >= 12.4 && hexJump <= 12.7) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge === 11) {
+            if (hexJump < 11.6) {
+                ABCScore += 5;
+            }
+            else if (hexJump >= 11.6) {
+                ABCScore += 4;
+            }
+            else if (hexJump >= 12.2) {
+                ABCScore += 3;
+            }
+            else if (hexJump >= 12.6 && hexJump <= 12.9) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge === 10) {
+            if (hexJump < 11.7) {
+                ABCScore += 5;
+            }
+            else if (hexJump >= 11.7) {
+                ABCScore += 4;
+            }
+            else if (hexJump >= 12.3) {
+                ABCScore += 3;
+            }
+            else if (hexJump >= 12.8 && hexJump <= 13.2) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge <=9) {
+            if (hexJump < 11.8) {
+                ABCScore += 5;
+            }
+            else if (hexJump >= 11.8) {
+                ABCScore += 4;
+            }
+            else if (hexJump >= 12.4) {
+                ABCScore += 3;
+            }
+            else if (hexJump >= 12.9 && hexJump <= 13.3) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        //benKneeVUp
+    var bentKneeVUp = parseInt($("#bent_knee_v_up_score").val());
+        if (skaterAge === 18 || skaterAge === 19) {
+            if (bentKneeVUp > 15) {
+                ABCScore += 5;
+            }
+            else if (bentKneeVUp = 15) {
+                ABCScore += 4;
+            }
+            else if (bentKneeVUp = 14) {
+                ABCScore += 3;
+            }
+            else if (bentKneeVUp = 13) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge === 17) {
+            if (bentKneeVUp > 15) {
+                ABCScore += 5;
+            }
+            else if (bentKneeVUp = 15) {
+                ABCScore += 4;
+            }
+            else if (bentKneeVUp >= 13) {
+                ABCScore += 3;
+            }
+            else if (bentKneeVUp >= 11) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }   
+        else if (skaterAge === 15 || skaterAge === 16) {
+            if (bentKneeVUp > 15) {
+                ABCScore += 5;
+            }
+            else if (bentKneeVUp >= 14) {
+                ABCScore += 4;
+            }
+            else if (bentKneeVUp >= 12) {
+                ABCScore += 3;
+            }
+            else if (bentKneeVUp >= 10) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge === 13 || skaterAge === 14) {
+            if (bentKneeVUp > 15) {
+                ABCScore += 5;
+            }
+            else if (bentKneeVUp >= 14) {
+                ABCScore += 4;
+            }
+            else if (bentKneeVUp >= 11) {
+                ABCScore += 3;
+            }
+            else if (bentKneeVUp >= 9) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge === 12) {
+            if (bentKneeVUp > 15) {
+                ABCScore += 5;
+            }
+            else if (bentKneeVUp >= 13) {
+                ABCScore += 4;
+            }
+            else if (bentKneeVUp >= 11) {
+                ABCScore += 3;
+            }
+            else if (bentKneeVUp >= 8) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge === 11) {
+            if (bentKneeVUp > 14) {
+                ABCScore += 5;
+            }
+            else if (bentKneeVUp >= 12) {
+                ABCScore += 4;
+            }
+            else if (bentKneeVUp >= 10) {
+                ABCScore += 3;
+            }
+            else if (bentKneeVUp >= 8) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge === 10) {
+            if (bentKneeVUp > 14) {
+                ABCScore += 5;
+            }
+            else if (bentKneeVUp >= 13) {
+                ABCScore += 4;
+            }
+            else if (bentKneeVUp >= 10) {
+                ABCScore += 3;
+            }
+            else if (bentKneeVUp >= 7) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+        else if (skaterAge <= 9) {
+            if (bentKneeVUp > 13) {
+                ABCScore += 5;
+            }
+            else if (bentKneeVUp >= 12) {
+                ABCScore += 4;
+            }
+            else if (bentKneeVUp >= 10) {
+                ABCScore += 3;
+            }
+            else if (bentKneeVUp >= 7) {
+                ABCScore += 2;
+            }
+            else {
+                ABCScore +=1;
+            }
+        }
+    return ABCScore;
+    };
+    
+    // function to evaluate power & strength
+    // function evaluatePowerStrength(); {}
+
+    ABCScore = evaluateABC();
     flexibilityScore = evaluateFlexibility();
     
     //data to be sent to the restdb 
@@ -287,6 +586,7 @@ $("#btnSubmit").on("click", function (e) {
         "push_up_score": pushUp,
         "tuck_jump_score": tuckJump,
         // agility, balance & coordination
+        "agility_balance_coordination_score": ABCScore,
         "hex_jump_score": hexJump,
         "side_plank_score": sidePlank,
         "spiral_balance_score": spiralBalance,
