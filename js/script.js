@@ -91,7 +91,7 @@ $("#btnSubmit").on("click", function (e) {
             }
         //lumbarExtension
     var lumbarExtension = parseInt($("#lumbar_extension_score").val());
-        if (lumbarExtension === 0) {
+        if (lumbarExtension <= 10) {
                 flexibilityScore += 5;
             }
             else if (lumbarExtension  <=15) {
@@ -566,8 +566,12 @@ $("#btnSubmit").on("click", function (e) {
     };
     
     // function to evaluate power & strength
-    // function evaluatePowerStrength(); {}
+    function evaluatePowerStrength() {
+    var PSScore = 0;
 
+    };
+
+    PSScore = evaluatePowerStrength();
     ABCScore = evaluateABC();
     flexibilityScore = evaluateFlexibility();
     
@@ -579,7 +583,8 @@ $("#btnSubmit").on("click", function (e) {
         "height": skaterHeight,
         "right_leg_length": legLengthR,
         "left_leg_length": legLengthL,
-        // power & strenght
+        // power & strength
+        "power_strength_score": PSScore,
         "single_leg_bound_left_score": singleLegBoundL,
         "single_leg_bound_right_score": singleLegBoundR,
         "vertical_jump_score": verticalJump,
