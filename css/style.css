@@ -2,8 +2,8 @@ body {
     background-color: black;
 }
 .navbar {
-    height: 90px;
-    background-color:#FBC107;
+    height: 120px;
+    background-color:white;
     color: black;
     padding: 30px;
     font-family: 'Julius Sans One', sans-serif;
@@ -19,7 +19,7 @@ h2 {
     font-family: 'Montserrat', sans-serif;
 }
 .card {
-    background-color:white;
+    background-color:rgb(175, 238, 249);
     color: gray;
     margin: 15px;
     font-size: 18px;
@@ -48,6 +48,12 @@ h3 {
 #fat label {
     font-style: italic;
 }
-.custom-select {
-    background-color:#FBC107;
+.photo {
+    max-width: 200px;
+}
+.footer {
+    color: white;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: small;
+    text-align: center;
 }
