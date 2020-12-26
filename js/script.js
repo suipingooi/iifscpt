@@ -1,4 +1,4 @@
-console.log("hi");
+console.log("Skater Development Profiling System");
 $(document).ready(function(){
 var settings = {
     "async": true,
@@ -31,14 +31,14 @@ $.ajax(settings).done(function (response) {
 });
 
 //SDP Scoresheet Form
-//adding new skater and fitness data
+//adding new skater card and fitness data
 $("#btnSubmit").on("click", function (e) {
     e.preventDefault();
     if ((($("#skater_family").val() === "") && ($("#skater_given").val() === "")) || (($("#age").val() === ""))) {
         alert("required fields are empty");
     }
     else {
-        alert("Submission Successful")
+        alert("Submission is Successful")
 };
 
     $("#skater_family").val($("#skater_family").val().toUpperCase());
@@ -1054,6 +1054,7 @@ $("#btnSubmit").on("click", function (e) {
     "data": JSON.stringify(jsondata)
 };   
 
+// form reset
 $("#studentform")[0].reset();
 
     //addition of new skater data to skater list
@@ -1064,8 +1065,9 @@ $("#studentform")[0].reset();
 
 });
 
+//function to update skater list on index page
 function updateSkaterList() {
-    //function to update skater list
+    
     $.ajax(settings).done(function (response) {
 
         var skaterListContent = $("#skaterListContent");
@@ -1086,6 +1088,7 @@ function updateSkaterList() {
         //add card
         console.log(response);
     });
+    // reloading index page after data submission
     location.href="index.html";
 };
 
