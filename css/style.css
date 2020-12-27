@@ -1,15 +1,25 @@
 body {
     background-color: black;
 }
+.logo {
+    max-width: 180px;
+    padding-bottom: 18px;
+}
 .navbar {
-    height: 120px;
+    height: 148px;
     background-color:white;
     color: black;
     padding: 30px;
     font-family: 'Julius Sans One', sans-serif;
+    font-size: small;
 }
-h2 {
-    font-size: 22px;
+.nav-link {
+    color: #26B3F1;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: white;
+    background-color:black;
+    border-color: black;
 }
 .mainbody {
     height: 100%;
@@ -57,9 +67,7 @@ h3 {
 #fat label {
     font-style: italic;
 }
-.photo {
-    max-width: 180px;
-}
+
 .footer {
     color: white;
     font-family: 'Julius Sans One', sans-serif;
