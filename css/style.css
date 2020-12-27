@@ -3,15 +3,21 @@ body {
 }
 .logo {
     max-width: 180px;
-    padding-bottom: 18px;
+    padding-bottom: 15px;
+    padding-right: 8px;
 }
 .navbar {
-    height: 148px;
+    height: 80px;
+    background-color:white;
+    padding: 30px;
+}
+.navbar-tab {
+    height: 75px;
     background-color:white;
     color: black;
     padding: 30px;
     font-family: 'Julius Sans One', sans-serif;
-    font-size: 15px;
+    font-size: large;
 }
 .nav-link {
     color: #26B3F1;
@@ -37,7 +43,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 .btn {
-    width: 100px;
+    width: 70px;
     margin: 5px;
     padding: 5px;
     font-size: 14px;
