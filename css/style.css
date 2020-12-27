@@ -77,3 +77,15 @@ h3 {
 .modal {
     color: black;
 }
+#intro {
+    font-size: medium;
+
+}
+
+h6 {
+    text-decoration: underline;
+    font-size: 14px;
+}
+.para {
+    font-size: small;
+}
