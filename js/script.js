@@ -1,5 +1,5 @@
 console.log("Skater Development Profiling System");
-$(document).ready(function(){
+$(document).ready(function () {
 var settings = {
     "async": true,
     "crossDomain": true,
@@ -50,17 +50,17 @@ $.ajax(settings).done(function (response) {
         skaterListContent.append(skaterCard);
     }
     $('#modal').on('show.bs.modal', function (event) {
-        var a = $(event.relatedTarget) 
-        var modalSkaterName = a.data('name')
-        var modalFScore = a.data('fscore')
-        var modalPSScore = a.data('psscore')
-        var modalABCScore = a.data('abcscore')
-        var modal = $(this)
-        modal.find('.modal-title').text(modalSkaterName)
-        modal.find('.modal-body #fscore').text(modalFScore + " : Flexibility" )
-        modal.find('.modal-body #psscore').text(modalPSScore + " : Power & Strength")
-        modal.find('.modal-body #abcscore').text(modalABCScore + " : Agility, Balance & Coordination")
-      })
+        var a = $(event.relatedTarget); 
+        var modalSkaterName = a.data('name');
+        var modalFScore = a.data('fscore');
+        var modalPSScore = a.data('psscore');
+        var modalABCScore = a.data('abcscore');
+        var modal = $(this);
+        modal.find('.modal-title').text(modalSkaterName);
+        modal.find('.modal-body #fscore').text(modalFScore + " : Flexibility");
+        modal.find('.modal-body #psscore').text(modalPSScore + " : Power & Strength");
+        modal.find('.modal-body #abcscore').text(modalABCScore + " : Agility, Balance & Coordination");
+      });
     console.log(response);
 });
 
@@ -72,8 +72,8 @@ $("#btnSubmit").on("click", function (e) {
         alert("required fields are empty");
     }
     else {
-        alert("Submission is Successful")
-};
+        alert("Submission is Successful");
+}
 
     $("#skater_family").val($("#skater_family").val().toUpperCase());
     var skateLevel = $("#skate_level").val();
@@ -97,10 +97,9 @@ $("#btnSubmit").on("click", function (e) {
     var seatedReach = $("#seated_reach_score").val();
     var lumbarExtension = $("#lumbar_extension_score").val();
 
-    
+    var flexibilityScore = 0;
     //function to evaluate flexibility
     function evaluateFlexibility() {
-    var flexibilityScore = 0;
     var skaterAge = parseInt($("#age").val());
     var legLengthR = parseInt($("#right_leg_length").val());
     var legLengthL = parseInt($("#left_leg_length").val());
@@ -296,11 +295,11 @@ $("#btnSubmit").on("click", function (e) {
             }
         }
     return flexibilityScore;
-    }; 
+    } 
     
-    //function to evaluate agility, balance and coordination (ABC)
-    function evaluateABC() {
     var ABCScore = 0;
+    //function to evaluate agility, balance and coordination (ABC)
+    function evaluateABC() {  
     var skaterAge = parseInt($("#age").val());
 
         //spiralBalance
@@ -464,13 +463,13 @@ $("#btnSubmit").on("click", function (e) {
             if (bentKneeVUp > 15) {
                 ABCScore += 5;
             }
-            else if (bentKneeVUp = 15) {
+            else if (bentKneeVUp === 15) {
                 ABCScore += 4;
             }
-            else if (bentKneeVUp = 14) {
+            else if (bentKneeVUp === 14) {
                 ABCScore += 3;
             }
-            else if (bentKneeVUp = 13) {
+            else if (bentKneeVUp === 13) {
                 ABCScore += 2;
             }
             else {
@@ -481,7 +480,7 @@ $("#btnSubmit").on("click", function (e) {
             if (bentKneeVUp > 15) {
                 ABCScore += 5;
             }
-            else if (bentKneeVUp = 15) {
+            else if (bentKneeVUp === 15) {
                 ABCScore += 4;
             }
             else if (bentKneeVUp >= 13) {
@@ -597,16 +596,16 @@ $("#btnSubmit").on("click", function (e) {
             }
         }
     return ABCScore;
-    };
+    }
     
+    var PSScore = 0;
     //function to evaluate power & strength
     function evaluatePowerStrength() {
-    var PSScore = 0;
     var skaterAge = parseInt($("#age").val());
         //singleLegBound
     var singleLegBoundL = parseInt($("#single_leg_bound_left_score").val());
     var singleLegBoundR = parseInt($("#single_leg_bound_right_score").val());
-    var averageBound = (singleLegBoundL + singleLegBoundR)/2
+    var averageBound = (singleLegBoundL + singleLegBoundR)/2;
         if (skaterAge === 19) {
             if (averageBound > 97) {
                 PSScore += 5;
@@ -800,7 +799,7 @@ $("#btnSubmit").on("click", function (e) {
             if (tuckJump > 15) {
                 PSScore += 5;
             }
-            else if (tuckJump = 15) {
+            else if (tuckJump === 15) {
                 PSScore += 4;
             }
             else if (tuckJump >= 13) {
@@ -1036,8 +1035,8 @@ $("#btnSubmit").on("click", function (e) {
                 PSScore +=1;
             }
         }
-    return PSScore
-    };
+    return PSScore;
+    }
 
     PSScore = evaluatePowerStrength();
     ABCScore = evaluateABC();
@@ -1124,7 +1123,7 @@ function updateSkaterList() {
     });
     // reloading index page after data submission
     location.href="index.html";
-};
+}
 
 });
 
