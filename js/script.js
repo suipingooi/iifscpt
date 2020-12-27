@@ -18,13 +18,13 @@ $.ajax(settings).done(function (response) {
     for (var i = 0; i < response.length; i++) {
         var skater_name = response[i].skater_name;
         var skate_level = response[i].skate_level;
-        var flexibility_score = response[i].flexibility_score;
+        var f_score = response[i].flexibility_score;
         var ps_score = response[i].power_strength_score;
         var abc_score = response[i].agility_balance_coordination_score;
         var skaterCard = `
                 <div class="card" style="width:15rem;">
                     <div class="card-body">    
-                        <a href="#" class="update" id="${skater_name}" data-toggle="modal" data-target="#modal" data-whatever="${skater_name}">${skater_name}</a>
+                        <a href="#" class="update" id="${skater_name}" data-toggle="modal" data-target="#modal" data-name="${skater_name}" data-fscore="${f_score}" data-psscore="${ps_score}" data-abcscore="${abc_score}">${skater_name}</a>
                         <p>${skate_level}</p>
                     </div>
                 </div>
@@ -32,15 +32,15 @@ $.ajax(settings).done(function (response) {
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="modalLabel">${skater_name}</h5>
+                                <h5 class="modal-title" id="modalLabel"></h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                                 </button>
                         </div>
                         <div class="modal-body">
-                            <p>Flexibility Score ${flexibility_score}</p>
-                            <p>Power & Strength Score ${ps_score}</p>
-                            <p>Agility, Balance & Coordination Score ${abc_score}</p>
+                            <p id="fscore">Flexibility Score</p>
+                            <p id="psscore">Power & Strength Score</p>
+                            <p id="abcscore">Agility, Balance & Coordination Score</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
@@ -51,10 +51,15 @@ $.ajax(settings).done(function (response) {
     }
     $('#modal').on('show.bs.modal', function (event) {
         var a = $(event.relatedTarget) 
-        var modalData = a.data('whatever')
+        var modalSkaterName = a.data('name')
+        var modalFScore = a.data('fscore')
+        var modalPSScore = a.data('psscore')
+        var modalABCScore = a.data('abcscore')
         var modal = $(this)
-        modal.find('.modal-title').text(modalData)
-        modal.find('.modal-body input').val(modalData)
+        modal.find('.modal-title').text(modalSkaterName)
+        modal.find('.modal-body #fscore').text(modalFScore + " : Flexibility" )
+        modal.find('.modal-body #psscore').text(modalPSScore + " : Power & Strength")
+        modal.find('.modal-body #abcscore').text(modalABCScore + " : Agility, Balance & Coordination")
       })
     console.log(response);
 });
