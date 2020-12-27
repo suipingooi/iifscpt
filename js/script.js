@@ -18,15 +18,44 @@ $.ajax(settings).done(function (response) {
     for (var i = 0; i < response.length; i++) {
         var skater_name = response[i].skater_name;
         var skate_level = response[i].skate_level;
+        var flexibility_score = response[i].flexibility_score;
+        var ps_score = response[i].power_strength_score;
+        var abc_score = response[i].agility_balance_coordination_score;
         var skaterCard = `
                 <div class="card" style="width:15rem;">
                     <div class="card-body">    
-                        <a href="skaterprofile.html" class="update" id="${skater_name}">${skater_name}</a>
+                        <a href="#" class="update" id="${skater_name}" data-toggle="modal" data-target="#modal" data-whatever="${skater_name}">${skater_name}</a>
                         <p>${skate_level}</p>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel${skater_name}" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabel">${skater_name}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Flexibility Score ${flexibility_score}</p>
+                            <p>Power & Strength Score ${ps_score}</p>
+                            <p>Agility, Balance & Coordination Score ${abc_score}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>`;
         skaterListContent.append(skaterCard);
     }
+    $('#modal').on('show.bs.modal', function (event) {
+        var a = $(event.relatedTarget) 
+        var modalData = a.data('whatever')
+        var modal = $(this)
+        modal.find('.modal-title').text(modalData)
+        modal.find('.modal-body input').val(modalData)
+      })
     console.log(response);
 });
 
