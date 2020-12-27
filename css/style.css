@@ -17,6 +17,7 @@ h2 {
     color: white;
     padding: 30px;
     font-family: 'Montserrat', sans-serif;
+    letter-spacing: normal;
 }
 .card {
     background-color: aliceblue;
@@ -40,6 +41,13 @@ input::placeholder {
 
 .form-control {
     margin: 5px;
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif;
+}
+#skate_level {
+    color: #1D9AAF;
+    background-color: aliceblue;
+    font-size: medium;
 }
 
 h3 {
@@ -57,4 +65,7 @@ h3 {
     font-family: 'Julius Sans One', sans-serif;
     font-size: small;
     text-align: center;
+}
+.modal {
+    color: black;
 }
