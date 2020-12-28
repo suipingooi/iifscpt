@@ -3,19 +3,24 @@ body {
 }
 .logo {
     max-width: 180px;
-    padding-bottom: 15px;
-    padding-right: 8px;
+    padding: 10px 10px 15px 10px;
+    
 }
 .navbar {
     height: 80px;
     background-color:white;
-    padding: 30px;
+    padding: 20px 10px 30px 10px;
 }
+#iglogo {
+    max-width: 55px;
+    padding: 10px;
+}
+
 .navbar-tab {
     height: 75px;
     background-color:white;
     color: black;
-    padding: 30px;
+    padding: 30px 5px 5px 5px;
     font-family: 'Julius Sans One', sans-serif;
     font-size: large;
 }
