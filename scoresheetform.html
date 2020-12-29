@@ -28,18 +28,23 @@
         <div class="mainbody">
             <form id="studentform">
                 <div class="form-row align-items-center">
-                    <div class="form-group col-md-5">
+                    <div class="form-group col-md-4">
                         <label for="SkaterName">Last Name</label>
                         <input type="text" class="form-control" id="skater_family" placeholder="family name"></input>
                     </div>
-                    <div class="form-group col-md-5">
+                    <div class="form-group col-md-4">
                         <label for="SkaterName">First Name</label>
                         <input type="text" class="form-control" id="skater_given" placeholder="given name"></input>
                     </div>
                     <div class="form-group col-md-2">
-                        <label class="mr-sm-1" for="age">Age</label>
-                        <input type="text" class="form-control" id="age" placeholder="years"></input>
+                        <label class="mr-sm-1" for="gender">Gender</label>
+                        <input type="text" class="form-control" id="gender" disabled placeholder="Female"></input>
                     </div>
+                    <div class="form-group col-md-2">
+                        <label class="mr-sm-1" for="age">Age</label>
+                        <input type="number" class="form-control" id="age" min="7" max="19" placeholder="years"></input>
+                    </div>
+                    <p class="disclaimer">Current version only supports data evaluation of females age 7-19</p>
                 </div>
                 <div class="form-row align-items-center">
                     <div class="col-md-3">
@@ -102,15 +107,15 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="SidePlank">Side Plank</label>
-                            <input type="float" class="form-control" id="side_plank_score" placeholder="max 120s"></input>
+                            <input type="float" class="form-control" id="side_plank_score" min="0" max="120" placeholder="max 120s"></input>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="Spiral Balance">Spiral Balance</label>
-                            <input type="float" class="form-control" id="spiral_balance_score" placeholder="max 120s"></input>
+                            <input type="float" class="form-control" id="spiral_balance_score" min="0" max="120" placeholder="max 120s"></input>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="BentKneeVUp">V-Up (30s)</label>
-                            <input type="float" class="form-control" id="bent_knee_v_up_score" placeholder="count"></input>
+                            <input type="float" class="form-control" id="bent_knee_v_up_score" min="0" placeholder="count"></input>
                         </div>
                     </div>
                     <div class="form-row">

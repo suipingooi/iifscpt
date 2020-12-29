@@ -40,6 +40,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: normal;
 }
+/* index page */
+
 .card {
     background-color: aliceblue;
     color: gray;
@@ -56,6 +58,8 @@ body {
     font-size: small;
 }
 
+/* scoresheet form */
+
 input::placeholder {
     font-size: small;
 }
@@ -64,6 +68,13 @@ input::placeholder {
     margin: 5px;
     font-size: medium;
     font-family: 'Montserrat', sans-serif;
+}
+.disclaimer {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 11px;
+    color: red;
+
 }
 #skate_level {
     color: #1D9AAF;
@@ -88,6 +99,8 @@ h3 {
 .modal {
     color: black;
 }
+
+/* info page */
 #intro {
     font-size: 18px;
 
