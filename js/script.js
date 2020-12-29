@@ -28,7 +28,7 @@ $.ajax(settings).done(function (response) {
                         <p>${skate_level}</p>
                     </div>
                 </div>
-                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel${skater_name}" aria-hidden="true">
+                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -42,6 +42,7 @@ $.ajax(settings).done(function (response) {
                             <p id="psscore">Power & Strength Score</p>
                             <p id="abcscore">Agility, Balance & Coordination Score</p>
                         </div>
+                        <canvas id="modalChart"></canvas>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                         </div>
@@ -49,19 +50,37 @@ $.ajax(settings).done(function (response) {
                 </div>`;
         skaterListContent.append(skaterCard);
     }
+
     $('#modal').on('show.bs.modal', function (event) {
         var a = $(event.relatedTarget); 
         var modalSkaterName = a.data('name');
         var modalFScore = a.data('fscore');
         var modalPSScore = a.data('psscore');
         var modalABCScore = a.data('abcscore');
+        var ctx = $("#modalChart")
         var modal = $(this);
         modal.find('.modal-title').text(modalSkaterName);
         modal.find('.modal-body #fscore').text(modalFScore + " : Flexibility");
         modal.find('.modal-body #psscore').text(modalPSScore + " : Power & Strength");
         modal.find('.modal-body #abcscore').text(modalABCScore + " : Agility, Balance & Coordination");
-      });
-    console.log(response);
+        var modalChart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: "radar",
+        
+            // The data for our dataset
+            data: {
+                labels: ["Agility, Balance & Coordination", "Flexibility", "Power & Strength"],
+                datasets: [{
+                    label: modalSkaterName,
+                    backgroundColor: "#26B3F1",
+                    borderColor: "#26B3F1",
+                    data: [modalABCScore, modalFScore, modalPSScore]
+                }]
+            },
+            options: {}
+        });
+    });
+    console.log(response); 
 });
 
 //SDP Scoresheet Form
@@ -1117,6 +1136,7 @@ function updateSkaterList() {
                     </div>
                 </div>`;
             skaterListContent.append(skaterCard);
+            skaterListContent.reverse();
         }
         //add card
         console.log(response);
