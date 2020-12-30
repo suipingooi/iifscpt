@@ -122,7 +122,7 @@ $.ajax(settings).done(function (response) {
         var modalFfsr = a.data("f-fsr");
         var modalFss = a.data("f-ss");
         var modalFsr = a.data("f-sr");
-        var modalFle = a.data("f-le")
+        var modalFle = a.data("f-le");
         var modalPSScore = a.data("psscore");
         var modalPSvj = a.data("ps-vj");
         var modalPStj = a.data("ps-tj");
@@ -151,7 +151,7 @@ $.ajax(settings).done(function (response) {
         modal.find('.modal-body #abcsp').text("Side Plank Hold " + modalABCsp + "sec");
         modal.find('.modal-body #abcsb').text("Spiral Balance " + modalABCsb + "sec");
         modal.find('.modal-body #abcbkvu').text("Bent Knee V-Up " + modalABCbkvu + "count(30s)");
-        var ctx = $("#modalChart")
+        var ctx = $("#modalChart");
         var modalChart = new Chart(ctx, {
             type: "radar",
             data: {
@@ -165,6 +165,7 @@ $.ajax(settings).done(function (response) {
             },
             options: {}
         });
+        modalChart();
     });
     console.log(response); 
 });
