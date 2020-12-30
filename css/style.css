@@ -1,6 +1,7 @@
 body {
     background-color: black;
 }
+
 .logo {
     max-width: 180px;
     padding: 10px 10px 15px 10px;
@@ -40,6 +41,12 @@ body {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: normal;
 }
+.footer {
+    color: white;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: small;
+    text-align: center;
+}
 /* index page */
 
 .card {
@@ -56,6 +63,16 @@ body {
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-size: small;
+}
+#btnReset {
+    opacity: 60%
+}
+#btnReset:hover {
+    opacity: 100%;
+}
+#btnSubmit:hover {
+    background-color: darkred;
+    border: darkred;
 }
 
 /* scoresheet form */
@@ -82,6 +99,16 @@ input::placeholder {
     font-size: medium;
 }
 
+.modal-header {
+    background-color: darkred;
+    color: white;
+    font-family: 'Julius Sans One', sans-serif;
+
+}
+.modal {
+    color: black;
+}
+
 h3 {
     text-decoration: underline;
 }
@@ -90,20 +117,12 @@ h3 {
     font-style: italic;
 }
 
-.footer {
-    color: white;
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: small;
-    text-align: center;
-}
-.modal {
-    color: black;
+
 }
 
 /* info page */
 #intro {
     font-size: 18px;
-
 }
 
 h6 {
