@@ -18,26 +18,89 @@ $.ajax(settings).done(function (response) {
     for (var i = 0; i < response.length; i++) {
         var skater_name = response[i].skater_name;
         var skate_level = response[i].skate_level;
+        var age = response[i].age;
         var f_score = response[i].flexibility_score;
+        var f_fsl = response[i].front_split_left_score;
+        var f_fsr = response[i].front_split_right_score;
+        var f_ss = response[i].standing_spiral_score;
+        var f_sr = response[i].seated_reach_score;
+        var f_le = response[i].lumbar_extension_score;
         var ps_score = response[i].power_strength_score;
+        var ps_vj = response[i].vertical_jump_score;
+        var ps_pu = response[i].push_up_score;
+        var ps_tj = response[i].tuck_jump_score;
+        var ps_slbl = response[i].single_leg_bound_left_score;
+        var ps_slbr = response[i].single_leg_bound_right_score;
         var abc_score = response[i].agility_balance_coordination_score;
+        var abc_hj = response[i].hex_jump_score;
+        var abc_sp = response[i].side_plank_score;
+        var abc_sb = response[i].spiral_balance_score;
+        var abc_bkvu = response[i].bent_knee_v_up_score;
         var skaterCard = `
                 <div class="card" style="width:15rem;">
                     <div class="card-body">    
-                        <a href="#" class="update" id="${skater_name}" data-toggle="modal" data-target="#modal" data-level="${skate_level}" data-name="${skater_name}" data-fscore="${f_score}" data-psscore="${ps_score}" data-abcscore="${abc_score}">${skater_name}</a>
+                        <a href="#" class="update" id="${skater_name}" data-toggle="modal" data-target="#dataModal" 
+                            data-age="${age}" 
+                            data-level="${skate_level}" 
+                            data-name="${skater_name}" 
+                            data-fscore="${f_score}" 
+                            data-f-fsl="${f_fsl}"
+                            data-f-fsr="${f_fsr}"
+                            data-f-ss="${f_ss}"
+                            data-f-sr="${f_sr}"
+                            data-f-le="${f_le}"
+                            data-psscore="${ps_score}" 
+                            data-ps-vj="${ps_vj}"
+                            data-ps-pu="${ps_pu}"
+                            data-ps-tj="${ps_tj}"
+                            data-ps-slbl="${ps_slbl}"
+                            data-ps-slbr="${ps_slbr}"
+                            data-abcscore="${abc_score}"
+                            data-abc-hj="${abc_hj}"
+                            data-abc-sb="${abc_sb}"
+                            data-abc-sp="${abc_sp}"
+                            data-abc-bkvu="${abc_bkvu}"
+                            >${skater_name}
+                        </a>
                         <p>${skate_level}</p>
                     </div>
                 </div>
-                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal fade" id="dataModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="modalLabel"></h5>
                             </div>
                             <div class="modal-body">
-                                <p id="fscore"></p>
-                                <p id="psscore"></p>
-                                <p id="abcscore"></p>
+                                <div class="container">
+                                    <div class="row">
+                                        <p id="fscore"></p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col modalcol" id="fss"></div>
+                                        <div class="col modalcol" id="fsr"></div>
+                                        <div class="col modalcol" id="fle"></div>
+                                        <div class="col modalcol" id="ffs"></div>
+                                    </div>
+                                    <div class="row">
+                                        <p id="psscore"></p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col modalcol" id="psvj"></div>
+                                        <div class="col modalcol" id="pstj"></div>
+                                        <div class="col modalcol" id="pspu"></div>
+                                        <div class="col modalcol" id="psslb"></div>
+                                    </div>
+                                    <div class="row">
+                                        <p id="abcscore"></p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col modalcol" id="abchj"></div>
+                                        <div class="col modalcol" id="abcsp"></div>
+                                        <div class="col modalcol" id="abcsb"></div>
+                                        <div class="col modalcol" id="abcbkvu"></div>
+                                    </div>
+                                </div>
                             </div>
                             <canvas id="modalChart"></canvas>
                             <div class="modal-footer">
@@ -49,18 +112,45 @@ $.ajax(settings).done(function (response) {
         skaterListContent.append(skaterCard);
     }
 
-    $("#modal").on("show.bs.modal", function (event) {
+    $("#dataModal").on("show.bs.modal", function (event) {
         var a = $(event.relatedTarget); 
-        var modalSkaterName = a.data('name');
-        var modalLevel = a.data('level')
-        var modalFScore = a.data('fscore');
-        var modalPSScore = a.data('psscore');
-        var modalABCScore = a.data('abcscore');
+        var modalSkaterName = a.data("name");
+        var modalLevel = a.data("level");
+        var modalAge = a.data("age");
+        var modalFScore = a.data("fscore");
+        var modalFfsl = a.data("f-fsl");
+        var modalFfsr = a.data("f-fsr");
+        var modalFss = a.data("f-ss");
+        var modalFsr = a.data("f-sr");
+        var modalFle = a.data("f-le")
+        var modalPSScore = a.data("psscore");
+        var modalPSvj = a.data("ps-vj");
+        var modalPStj = a.data("ps-tj");
+        var modalPSpu = a.data("ps-pu");
+        var modalPSslbl = a.data("ps-slbl");
+        var modalPSslbr = a.data("ps-slbr");
+        var modalABCScore = a.data("abcscore");
+        var modalABChj = a.data("abc-hj");
+        var modalABCsp = a.data("abc-sp");
+        var modalABCsb = a.data("abc-sb");
+        var modalABCbkvu = a.data("abc-bkvu");
         var modal = $(this);
-        modal.find('.modal-title').text(modalSkaterName + " (" + modalLevel + ")");
-        modal.find('.modal-body #fscore').text(modalFScore + " : Flexibility");
-        modal.find('.modal-body #psscore').text(modalPSScore + " : Power & Strength");
-        modal.find('.modal-body #abcscore').text(modalABCScore + " : Agility, Balance & Coordination");
+        modal.find('.modal-title').text(modalSkaterName + " (AGE " + modalAge + ") " + modalLevel);
+        modal.find('.modal-body #fscore').text("(" + modalFScore + ") Flexibility");
+        modal.find('.modal-body #fss').text("Standing Spiral " + modalFss + "cm");
+        modal.find('.modal-body #fsr').text("Seated Reach " + modalFsr + "cm");
+        modal.find('.modal-body #ffs').text("Front Split " + modalFfsl + "cm(L) " + modalFfsr + "cm(R)");
+        modal.find('.modal-body #fle').text("Lumbar Extension " + modalFle + "cm");
+        modal.find('.modal-body #psscore').text("(" + modalPSScore + ") Power & Strength");
+        modal.find('.modal-body #psvj').text("Vertical Jump " + modalPSvj + "cm");
+        modal.find('.modal-body #pstj').text("Tuck Jump " + modalPStj + "count(30s)");
+        modal.find('.modal-body #pspu').text("Push Up " + modalPSpu + "count(30s)");
+        modal.find('.modal-body #psslb').text("Single Leg Bound " + modalPSslbl + "cm(L) " + modalPSslbr + "cm(R)");
+        modal.find('.modal-body #abcscore').text("(" + modalABCScore + ") Agility, Balance & Coordination");
+        modal.find('.modal-body #abchj').text("Hexagon Jump " + modalABChj + "sec");
+        modal.find('.modal-body #abcsp').text("Side Plank Hold " + modalABCsp + "sec");
+        modal.find('.modal-body #abcsb').text("Spiral Balance " + modalABCsb + "sec");
+        modal.find('.modal-body #abcbkvu').text("Bent Knee V-Up " + modalABCbkvu + "count(30s)");
         var ctx = $("#modalChart")
         var modalChart = new Chart(ctx, {
             type: "radar",
