@@ -42,7 +42,7 @@
                     </div>
                     <div class="form-group col-md-2">
                         <label class="mr-sm-1" for="age">Age</label>
-                        <input type="number" class="form-control" id="age" min="7" max="19" placeholder="years"></input>
+                        <input type="number" class="form-control" id="age" name="age" min=7 max=19 placeholder=""years">
                     </div>
                     <p class="disclaimer">Current version only supports data evaluation of females age 7-19</p>
                 </div>
@@ -145,6 +145,37 @@
                 <button type="reset" id="btnReset" value="reset" class="btn btn-info">Reset</button>
             </form>
             <hr>
+            <div class="modal fade" tabindex="-1" role="dialog" id="alertModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">ALERT</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p for="alert" id="alert">Please enter a valid response</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" tabindex="-1" role="dialog" id="successModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">SUCCESS</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Submission is Successful</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <footer class="footer"> &copy; 2020 Island Ice Figure Skating Club. <br> All rights reserved.</footer>
         <script src="js/jquery.js"></script>
@@ -152,3 +183,4 @@
         <script src="js/script.js"></script>
     </body>
 </html>
+
