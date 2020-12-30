@@ -24,7 +24,7 @@ $.ajax(settings).done(function (response) {
         var skaterCard = `
                 <div class="card" style="width:15rem;">
                     <div class="card-body">    
-                        <a href="#" class="update" id="${skater_name}" data-toggle="modal" data-target="#modal" data-name="${skater_name}" data-fscore="${f_score}" data-psscore="${ps_score}" data-abcscore="${abc_score}">${skater_name}</a>
+                        <a href="#" class="update" id="${skater_name}" data-toggle="modal" data-target="#modal" data-level="${skate_level}" data-name="${skater_name}" data-fscore="${f_score}" data-psscore="${ps_score}" data-abcscore="${abc_score}">${skater_name}</a>
                         <p>${skate_level}</p>
                     </div>
                 </div>
@@ -33,41 +33,37 @@ $.ajax(settings).done(function (response) {
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="modalLabel"></h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                        </div>
-                        <div class="modal-body">
-                            <p id="fscore">Flexibility Score</p>
-                            <p id="psscore">Power & Strength Score</p>
-                            <p id="abcscore">Agility, Balance & Coordination Score</p>
-                        </div>
-                        <canvas id="modalChart"></canvas>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="fscore"></p>
+                                <p id="psscore"></p>
+                                <p id="abcscore"></p>
+                            </div>
+                            <canvas id="modalChart"></canvas>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>`;
         skaterListContent.append(skaterCard);
     }
 
-    $('#modal').on('show.bs.modal', function (event) {
+    $("#modal").on("show.bs.modal", function (event) {
         var a = $(event.relatedTarget); 
         var modalSkaterName = a.data('name');
+        var modalLevel = a.data('level')
         var modalFScore = a.data('fscore');
         var modalPSScore = a.data('psscore');
         var modalABCScore = a.data('abcscore');
-        var ctx = $("#modalChart")
         var modal = $(this);
-        modal.find('.modal-title').text(modalSkaterName);
+        modal.find('.modal-title').text(modalSkaterName + " (" + modalLevel + ")");
         modal.find('.modal-body #fscore').text(modalFScore + " : Flexibility");
         modal.find('.modal-body #psscore').text(modalPSScore + " : Power & Strength");
         modal.find('.modal-body #abcscore').text(modalABCScore + " : Agility, Balance & Coordination");
+        var ctx = $("#modalChart")
         var modalChart = new Chart(ctx, {
-            // The type of chart we want to create
             type: "radar",
-        
-            // The data for our dataset
             data: {
                 labels: ["Agility, Balance & Coordination", "Flexibility", "Power & Strength"],
                 datasets: [{
@@ -87,13 +83,36 @@ $.ajax(settings).done(function (response) {
 //adding new skater card and fitness data
 $("#btnSubmit").on("click", function (e) {
     e.preventDefault();
-    if ((($("#skater_family").val() === "") && ($("#skater_given").val() === "")) || (($("#age").val() === ""))) {
-        alert("required fields are empty");
+    // if name, height n leg length are empty
+    if ((($("#skater_family").val()) === "") || (($("#skater_given").val()) === "") || (($("#right_leg_length").val()) === "") || (($("#left_leg_length").val()) === "") || (($("#height").val()) === "")) {
+        $('#alertModal').modal('show');
+        return false;
+        }
+    //if age is not between 7 and 19
+    else if (($("#age").val() < 7) || ($("#age").val() >19)) {
+        $('#alertModal').modal('show');
+        return false;
     }
+    //if power & strength fields are empty
+    else if ((($("#single_leg_bound_left_score").val()) === "") || (($("#single_leg_bound_right_score").val()) === "") || (($("#vertical_jump_score").val()) === "") || (($("#push_up_score").val()) === "") || (($("#tuck_jump_score").val()) === "")) {
+        $('#alertModal').modal('show');
+        return false;
+    }
+    //if aglity, balance & coordination fields are empty
+    else if ((($("#hex_jump_score").val()) === "") || (($("#side_plank_score").val()) === "") || (($("#spiral_balance_score").val()) === "") || (($("#bent_knee_v_up_score").val()) === "")) {
+        $('#alertModal').modal('show');
+        return false;
+    }
+    //if flexibility fields are empty
+    else if ((($("#front_split_left_score").val()) ==="") || (($("#front_split_right_score").val()) === "") || (($("#standing_spiral_score").val()) === "") || (($("#seated_reach_score").val()) === "") || (($("#lumbar_extension_score")) === "")) {
+        $('#alertModal').modal('show');
+        return false;
+    }  
     else {
-        alert("Submission is Successful");
-}
-
+        $('#successModal').modal('show');
+    }
+    
+    //data variables for evaluation  
     $("#skater_family").val($("#skater_family").val().toUpperCase());
     var skateLevel = $("#skate_level").val();
     var skaterName = `${$("#skater_family").val()} ${$("#skater_given").val()}`;
@@ -1104,10 +1123,11 @@ $("#btnSubmit").on("click", function (e) {
     },
     "processData": false,
     "data": JSON.stringify(jsondata)
-};   
+    };
 
-// form reset
-$("#studentform")[0].reset();
+
+    // form reset
+    $("#studentform")[0].reset();
 
     //addition of new skater data to skater list
     $.ajax(settings).done(function (response) {
@@ -1116,6 +1136,7 @@ $("#studentform")[0].reset();
     });
 
 });
+//eof buttonclick submit   
 
 //function to update skater list on index page
 function updateSkaterList() {
