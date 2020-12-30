@@ -165,7 +165,6 @@ $.ajax(settings).done(function (response) {
             },
             options: {}
         });
-        modalChart();
     });
     console.log(response); 
 });
