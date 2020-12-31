@@ -26,7 +26,7 @@ body {
     font-size: large;
 }
 .nav-link {
-    color: #26B3F1;
+    color: #50c4f2;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: white;
@@ -71,8 +71,8 @@ body {
     opacity: 100%;
 }
 #btnSubmit:hover {
-    background-color: darkred;
-    border: darkred;
+    background-color: #d9328e;
+    border: #d9328e;
 }
 
 /* scoresheet form */
@@ -100,7 +100,7 @@ input::placeholder {
 }
 
 .modal-header {
-    background-color: darkred;
+    background-color: #d9328e;
     color: white;
     font-family: 'Julius Sans One', sans-serif;
 
@@ -119,7 +119,7 @@ input::placeholder {
     margin-top: 2px;
     margin-bottom: 15px;
     padding: 3px;
-    border: solid 0.5px #ED008F;
+    border: solid 0.5px #d9328e;
     font-size: 12px;
 }
 h3 {
