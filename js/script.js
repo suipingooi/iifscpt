@@ -158,7 +158,8 @@ $.ajax(settings).done(function (response) {
                 labels: ["Agility, Balance & Coordination", "Flexibility", "Power & Strength"],
                 datasets: [{
                     label: modalSkaterName,
-                    backgroundColor: "#26B3F1",
+                    backgroundColor: 'rgba(47, 178, 241, 0.3)',
+                    borderWidth: "1",
                     borderColor: "#26B3F1",
                     data: [modalABCScore, modalFScore, modalPSScore]
                 }]
