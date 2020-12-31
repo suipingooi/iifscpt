@@ -1,11 +1,25 @@
-# Code Institute Project 2 - Interactive Front-end Development
-## Athlete Development Profiling
+## Code Institute Milestone Project 2 - Interactive Front-end Development
 
-This project aims to quantify and track a figure skater's development as an elite athlete for high performance pathway through profiling. It will allow individual skaters to map out their own progress goals with coaches' guidance whilst highlighting possible improvement areas. 
+### Athlete Development Profiling Tool
+
+This project aims to quantify and track a figure skater's development as an athlete for high performance pathway through profiling. It will allow individual skaters to map out their own progress goals with coaches' guidance whilst highlighting possible improvement areas. It is also a visualization tool for skaters to be more aware of their strong components vs. weak components for a better understanding of on ice performance.
 
 The following are the stakeholders:
 1. Skaters / Skater's Parents
 2. Skater's Coach
+
+### UX - User Experience
+
+![Interactive Web Design](video)
+
+
+![Color Chart](images/iifsc_colorchart.png)
+
+
+![Font Gylps](images/athletedp_fontgylps.png)
+Julius Sans One and Montserrat (san-serif family) were selected as font-pair for this project to portray IIFSC's lean yet no nonsense approach towards setting a higher bar for the figure skating community.
+
+A demo of the site can be found here [https://suipingooi.github.io/athletedp/](https://suipingooi.github.io/athletedp/)
 
 ## Getting Started
 
@@ -16,7 +30,10 @@ The following are the stakeholders:
 <!-- What things you need to install the software and how to install them -->
 
 ```
-<!-- Give examples -->
+Bootstrap - CSS
+Bootstrap - JS
+JQuery.JS
+Chart.JS
 ```
 
 ### Installing
@@ -91,3 +108,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Inspiration
 * etc
 
+IIFSC colors: #ED008F; #26B3F1
+info color: #1D9AAF

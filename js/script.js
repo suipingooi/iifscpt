@@ -74,6 +74,8 @@ $.ajax(settings).done(function (response) {
                             <div class="modal-body">
                                 <div class="container">
                                     <canvas id="modalChart"></canvas>
+                                </div>
+                                <div class="container">
                                     <div class="row">
                                         <p id="fscore"></p>
                                     </div>
@@ -152,7 +154,7 @@ $.ajax(settings).done(function (response) {
         modal.find('.modal-body #abcsb').text("Spiral Balance " + modalABCsb + "sec");
         modal.find('.modal-body #abcbkvu').text("Bent Knee V-Up " + modalABCbkvu + "count(30s)");
         var ctx = $("#modalChart");
-        var modalChart = new Chart(ctx, {
+        modalChart = new Chart(ctx, {
             type: "radar",
             data: {
                 labels: ["Agility, Balance & Coordination", "Flexibility", "Power & Strength"],
