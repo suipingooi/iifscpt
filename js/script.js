@@ -73,6 +73,7 @@ $.ajax(settings).done(function (response) {
                             </div>
                             <div class="modal-body">
                                 <div class="container">
+                                    <canvas id="modalChart"></canvas>
                                     <div class="row">
                                         <p id="fscore"></p>
                                     </div>
@@ -102,7 +103,6 @@ $.ajax(settings).done(function (response) {
                                     </div>
                                 </div>
                             </div>
-                            <canvas id="modalChart"></canvas>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                             </div>
