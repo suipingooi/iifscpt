@@ -11,28 +11,31 @@ The following are the stakeholders:
 ### UX - User Experience
 
 ![Interactive Web Design](video)
-
-
+```
+```
 ![Color Chart](images/iifsc_colorchart.png)
-IIFSC base colors were used for uniformity. IIFSC's logo represents the blades and scratch lines made on ice when a figure skater draws / cuts an image on ice. Both blades were chosen in pink and blue to signify gender neutrality whislt one being larger than the other to representing the relationship and bond between parent(educator/coach) and child(student). 
-
+```
+IIFSC base colors were used for uniformity. IIFSC's logo represents the blades and scratch lines made when a figure skater draws / cuts an image on ice. Both blades were chosen in pink and blue to signify gender neutrality whislt one being larger than the other to representt the relationship and bond between parent(educator/coach) and child(student). 
+```
 ![Font Gylps](images/athletedp_fontgylps.png)
+```
 Julius Sans One and Montserrat (san-serif family) were selected as font-pair for this project to portray IIFSC's lean yet no nonsense approach towards setting a higher bar for the figure skating community.
-
+```
 A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](https://suipingooi.github.io/iifscpt/)
 
-## Built With Technologies
+## Built With 
+### Technologies
+1. HTML 5.0 + CSS
+2. Bootstrap 4.0 - CSS & JS [https://getbootstrap.com/](https://getbootstrap.com/)
+3. JQuery.JS [https://jquery.com/](https://jquery.com/)
+4. Restdb.io [https://restdb.io/](https://restdb.io/)
+5. Chart.JS [https://www.chartjs.org/](https://www.chartjs.org/)
 
-```
-HTML 5.0 + CSS
-Bootstrap 4.0 - CSS & JS [https://getbootstrap.com/](https://getbootstrap.com/)
-JQuery.JS [https://jquery.com/](https://jquery.com/)
-Chart.JS [https://www.chartjs.org/](https://www.chartjs.org/)
-Google Fonts [https://fonts.google.com/](https://fonts.google.com/)
-Gimp 2.10 [https://www.gimp.org/](https://www.gimp.org/)
-restdb.io [https://restdb.io/](https://restdb.io/)
+### Styling
+1. Google Fonts [https://fonts.google.com/](https://fonts.google.com/)
+2. Gimp 2.10 [https://www.gimp.org/](https://www.gimp.org/) 
+3. Adobe Color [https://color.adobe.com/](https://color.adobe.com/)
 
-```
 
 ### Testing
 [JSHint](https://jshint.com/) testing was done for script.js. All warnings dealt with.
