@@ -19,7 +19,11 @@ IIFSC base colors were used for uniformity. IIFSC's logo represents the blades a
 ```
 ![Font Gylps](images/athletedp_fontgylps.png)
 ```
-Julius Sans One and Montserrat (san-serif family) were selected as font-pair for this project to portray IIFSC's lean yet no nonsense approach towards setting a higher bar for the figure skating community.
+Julius Sans One and Montserrat (san-serif family) 
+were selected as font-pair for this project to 
+portray IIFSC's lean yet no nonsense approach 
+towards setting a higher bar for the figure skating 
+community.
 ```
 A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](https://suipingooi.github.io/iifscpt/)
 
