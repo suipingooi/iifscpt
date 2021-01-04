@@ -14,18 +14,14 @@ The following are the stakeholders:
 
 
 ![Color Chart](images/iifsc_colorchart.png)
-IIFSC base colors were used for uniformity. IIFSC's logo represents the blades and scratch lines made on ice when a figure skater draws / cuts an image on ice. Both blades were chosen in pink and blue to signify gender neutrality whislt one being larger than the other to represent the bond between parent(educator/coach/nurturer) and child(student). 
+IIFSC base colors were used for uniformity. IIFSC's logo represents the blades and scratch lines made on ice when a figure skater draws / cuts an image on ice. Both blades were chosen in pink and blue to signify gender neutrality whislt one being larger than the other to representing the relationship and bond between parent(educator/coach) and child(student). 
 
 ![Font Gylps](images/athletedp_fontgylps.png)
 Julius Sans One and Montserrat (san-serif family) were selected as font-pair for this project to portray IIFSC's lean yet no nonsense approach towards setting a higher bar for the figure skating community.
 
 A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](https://suipingooi.github.io/iifscpt/)
 
-## Technologies
-
-<!-- These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. -->
-
-### Prerequisites
+## Built With Technologies
 
 ```
 HTML 5.0 + CSS
@@ -38,77 +34,39 @@ restdb.io [https://restdb.io/](https://restdb.io/)
 
 ```
 
-### Installing
+### Testing
+[JSHint](https://jshint.com/) testing was done for script.js. All warnings dealt with.
 
-<!-- A step by step series of examples that tell you how to get a development env running -->
+[W3C Validator](https://validator.w3.org/) testing was done for all html files. All errors corrected and suggestion for language included. 
 
-<!-- Say what the step will be -->
-
-```
-<!-- Give the example -->
-```
-
-<!-- And repeat -->
+[Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) testing was done for css file. No error was found.
 
 ```
-<!-- until finished -->
 ```
 
-<!-- End with an example of getting some data out of the system or using it for a little demo -->
-
-## Running the tests
-
-<!-- Explain how to run the automated tests for this system -->
-
-### Break down into end to end tests
-
-<!-- Explain what these tests test and why -->
-
+## Features
 ```
-<!-- Give an example -->
 ```
-
-### And coding style tests
-
-<!-- Explain what these tests test and why -->
-
-```
-<!-- Give an example -->
-```
+### Existing Features
+### Features left to Implement
 
 ## Deployment
 
-<!-- Add additional notes about how to deploy this on a live system -->
+## Credits
+Island Ice Figure Skating Club (IIFSC) for all the support provided in the development of this fitness diagnostic tool
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versions
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+#### Content
+NAPFA
+#### Media
+1. IIFSC logo from IIFSC 
+2. IIFSC color chart from [AdobeColor](https://color.adobe.com/create/image) retrieved on 31 Dec 2020.
+3. IG logo adapted from [Flaticon](https://www.flaticon.com/free-icon/instagram-logo_87390) retrieved on 27 Dec 2020.
 
 ## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-IIFSC colors: #ED008F; #26B3F1
-info color: #1D9AAF
+1. Ms. Jackie Chin - President, IIFSC
+2. IIFSC Executive Committee Members  
+    1. Mr. TC Wee
+    2. Ms. Angeline
+    3. Ms. Priscilla
+    4. Ms. Cindy
+3. Ms. Genevieve Har - IIFSC Coach
