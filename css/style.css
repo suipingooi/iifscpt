@@ -56,24 +56,6 @@ body {
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
 }
-.btn {
-    width: 70px;
-    margin: 5px;
-    padding: 5px;
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: small;
-}
-#btnReset {
-    opacity: 60%
-}
-#btnReset:hover {
-    opacity: 100%;
-}
-#btnSubmit:hover {
-    background-color: #d9328e;
-    border: #d9328e;
-}
 
 /* scoresheet form */
 
@@ -98,7 +80,34 @@ input::placeholder {
     background-color: aliceblue;
     font-size: medium;
 }
+h3 {
+    text-decoration: underline;
+}
+.btn {
+    width: 70px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+}
+#fat label {
+    font-style: italic;
+    font-size: 15px;
+}
+#btnReset {
+    opacity: 60%
+}
+#btnReset:hover {
+    opacity: 100%;
+}
+#btnSubmit:hover {
+    background-color: #d9328e;
+    border-color: #d9328e;
+}
 
+
+/* modals (index & scoresheet page)*/
 .modal-header {
     background-color: #d9328e;
     color: white;
@@ -121,14 +130,6 @@ input::placeholder {
     padding: 3px;
     border: solid 0.5px #d9328e;
     font-size: 12px;
-}
-h3 {
-    text-decoration: underline;
-}
-
-#fat label {
-    font-style: italic;
-    font-size: 15px;
 }
 
 /* info page */
