@@ -14,26 +14,28 @@ The following are the stakeholders:
 
 
 ![Color Chart](images/iifsc_colorchart.png)
-
+IIFSC base colors were used for uniformity. IIFSC's logo represents the blades and scratch lines made on ice when a figure skater draws / cuts an image on ice. Both blades were chosen in pink and blue to signify gender neutrality whislt one being larger than the other to represent the bond between parent(educator/coach/nurturer) and child(student). 
 
 ![Font Gylps](images/athletedp_fontgylps.png)
 Julius Sans One and Montserrat (san-serif family) were selected as font-pair for this project to portray IIFSC's lean yet no nonsense approach towards setting a higher bar for the figure skating community.
 
-A demo of the site can be found here [https://suipingooi.github.io/athletedp/](https://suipingooi.github.io/athletedp/)
+A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](https://suipingooi.github.io/iifscpt/)
 
-## Getting Started
+## Technologies
 
 <!-- These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. -->
 
 ### Prerequisites
 
-<!-- What things you need to install the software and how to install them -->
-
 ```
-Bootstrap - CSS
-Bootstrap - JS
-JQuery.JS
-Chart.JS
+HTML 5.0 + CSS
+Bootstrap 4.0 - CSS & JS [https://getbootstrap.com/](https://getbootstrap.com/)
+JQuery.JS [https://jquery.com/](https://jquery.com/)
+Chart.JS [https://www.chartjs.org/](https://www.chartjs.org/)
+Google Fonts [https://fonts.google.com/](https://fonts.google.com/)
+Gimp 2.10 [https://www.gimp.org/](https://www.gimp.org/)
+restdb.io [https://restdb.io/](https://restdb.io/)
+
 ```
 
 ### Installing
