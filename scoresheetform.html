@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +12,9 @@
     </head>
     <body>
         <nav class="navbar">
-            <img class="logo rounded d-block" src="images/iifsc.webp">
+            <img class="logo rounded d-block" src="images/iifsc.webp" alt="Island Ice Figure Skating Club">
             <a href="https://www.instagram.com/islandicefigureskatingclub/?hl=en" target="_blank">
-                    <img id="iglogo" src="images/iglogo.png"></a>
+                    <img id="iglogo" src="images/iglogo.png" alt="IIFSC IG"></a>
         </nav>
         <nav class="navbar-tab">
             <div class="row">
@@ -29,16 +29,16 @@
             <form id="studentform">
                 <div class="form-row align-items-center">
                     <div class="form-group col-md-4">
-                        <label for="SkaterName">Last Name</label>
-                        <input type="text" class="form-control" id="skater_family" placeholder="family name"></input>
+                        <label for="skater_family">Last Name</label>
+                        <input type="text" class="form-control" id="skater_family" placeholder="family name">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="SkaterName">First Name</label>
-                        <input type="text" class="form-control" id="skater_given" placeholder="given name"></input>
+                        <label for="skater_given">First Name</label>
+                        <input type="text" class="form-control" id="skater_given" placeholder="given name">
                     </div>
                     <div class="form-group col-md-2">
                         <label class="mr-sm-1" for="gender">Gender</label>
-                        <input type="text" class="form-control" id="gender" disabled placeholder="Female"></input>
+                        <input type="text" class="form-control" id="gender" disabled placeholder="Female">
                     </div>
                     <div class="form-group col-md-2">
                         <label class="mr-sm-1" for="age">Age</label>
@@ -61,15 +61,15 @@
                     </div>
                     <div class="col-md-3">
                         <label class="mr-sm-2" for="height">Height</label>
-                        <input type="float" class="form-control" id="height" placeholder="cm"></input>
+                        <input type="number" class="form-control" id="height" placeholder="cm">
                     </div>
                     <div class="col-md-3">
                         <label class="mr-sm-2" for="left_leg_length">Leg Length (L)</label>
-                        <input type="float" class="form-control" id="left_leg_length" placeholder="cm"></input>
+                        <input type="number" class="form-control" id="left_leg_length" placeholder="cm">
                     </div>
                     <div class="col-md-3">
                         <label class="mr-sm-2" for="right_leg_length">Leg Length (R)</label>
-                        <input type="float" class="form-control" id="right_leg_length" placeholder="cm"></input>
+                        <input type="number" class="form-control" id="right_leg_length" placeholder="cm">
                     </div>
                 </div>
                 <hr>
@@ -80,21 +80,21 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
-                            <label for="SingleLegBound">Single Leg Bound</label>
-                            <input type="float" class="form-control" id="single_leg_bound_left_score" placeholder="left leg (cm)"></input>
-                            <input type="float" class="form-control" id="single_leg_bound_right_score" placeholder="right leg (cm)"></input>
+                            <label for="single_leg_bound_left_score">Single Leg Bound</label>
+                                <input type="number" class="form-control" id="single_leg_bound_left_score" placeholder="left leg (cm)">
+                                <input type="number" class="form-control" id="single_leg_bound_right_score" placeholder="right leg (cm)">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="VerticalJump">Vertical Jump</label>
-                            <input type="float" class="form-control" id="vertical_jump_score" placeholder="cm"></input>
+                            <label for="vertical_jump_score">Vertical Jump</label>
+                            <input type="number" class="form-control" id="vertical_jump_score" placeholder="cm">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="PushUp">Push Up (30s)</label>
-                            <input type="float" class="form-control" id="push_up_score" placeholder="count"></input>
+                            <label for="push_up_score">Push Up (30s)</label>
+                            <input type="number" class="form-control" id="push_up_score" placeholder="count">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="TuckJump">Tuck Jump (30s)</label>
-                            <input type="float" class="form-control" id="tuck_jump_score" placeholder="count"></input>
+                            <label for="tuck_jump_score">Tuck Jump (30s)</label>
+                            <input type="number" class="form-control" id="tuck_jump_score" placeholder="count">
                         </div>
                     </div>
                     <div class="form-row">
@@ -102,20 +102,20 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
-                            <label for="HexJump">Hex Jump</label>
-                            <input type="float" class="form-control" id="hex_jump_score" placeholder="time (s)"></input>
+                            <label for="hex_jump_score">Hex Jump</label>
+                            <input type="number" class="form-control" id="hex_jump_score" placeholder="time (s)">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="SidePlank">Side Plank</label>
-                            <input type="float" class="form-control" id="side_plank_score" min="0" max="120" placeholder="max 120s"></input>
+                            <label for="side_plank_score">Side Plank</label>
+                            <input type="number" class="form-control" id="side_plank_score" min="0" max="120" placeholder="max 120s">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="Spiral Balance">Spiral Balance</label>
-                            <input type="float" class="form-control" id="spiral_balance_score" min="0" max="120" placeholder="max 120s"></input>
+                            <label for="spiral_balance_score">Spiral Balance</label>
+                            <input type="number" class="form-control" id="spiral_balance_score" min="0" max="120" placeholder="max 120s">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="BentKneeVUp">Bent Knee V-Up (30s)</label>
-                            <input type="float" class="form-control" id="bent_knee_v_up_score" min="0" placeholder="count"></input>
+                            <label for="bent_knee_v_up_score">Bent Knee V-Up (30s)</label>
+                            <input type="number" class="form-control" id="bent_knee_v_up_score" min="0" placeholder="count">
                         </div>
                     </div>
                     <div class="form-row">
@@ -123,21 +123,21 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
-                            <label for="FrontSplit">Front Split</label>
-                            <input type="float" class="form-control" id="front_split_left_score" placeholder="left (cm)"></input>
-                            <input type="float" class="form-control" id="front_split_right_score" placeholder="right (cm)"></input>
+                            <label for="front_split_left_score">Front Split</label>
+                            <input type="number" class="form-control" id="front_split_left_score" placeholder="left (cm)">
+                            <input type="number" class="form-control" id="front_split_right_score" placeholder="right (cm)">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="StandingSpiral">Standing Spiral</label>
-                            <input type="float" class="form-control" id="standing_spiral_score" placeholder="cm"></input>
+                            <label for="standing_spiral_score">Standing Spiral</label>
+                            <input type="number" class="form-control" id="standing_spiral_score" placeholder="cm">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="SeatedReach">Seated Reach</label>
-                            <input type="float" class="form-control" id="seated_reach_score" placeholder="cm"></input>
+                            <label for="seated_reach_score">Seated Reach</label>
+                            <input type="number" class="form-control" id="seated_reach_score" placeholder="cm">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="LumbarExtension">Lumbar Extension</label>
-                            <input type="float" class="form-control" id="lumbar_extension_score" placeholder="cm"></input>
+                            <label for="lumbar_extension_score">Lumbar Extension</label>
+                            <input type="number" class="form-control" id="lumbar_extension_score" placeholder="cm">
                         </div>
                     </div>
                 </div>     
@@ -152,7 +152,7 @@
                             <h4 class="modal-title">ALERT</h4>
                         </div>
                         <div class="modal-body">
-                            <p for="alert" id="alert">Please enter a valid response</p>
+                            <p id="alert">Please enter a valid response</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
@@ -175,7 +175,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <footer class="footer"> &copy; 2020 Island Ice Figure Skating Club. <br> All rights reserved.</footer>
         <script src="js/jquery.js"></script>
