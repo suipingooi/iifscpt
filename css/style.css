@@ -144,3 +144,11 @@ ol {
 .para {
     font-size: medium;
 }
+.def {
+    font-size: small;
+    font-family: 'Monserrat', sans-serif;
+}
+.infoimg {
+    margin: 5px;
+    max-width: 200px;
+}
