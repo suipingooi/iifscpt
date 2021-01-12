@@ -82,6 +82,10 @@ input::placeholder {
     background-color: aliceblue;
     font-size: medium;
 }
+h5 {
+    text-align: center;
+    font-weight: 800;
+}
 h3 {
     text-decoration: underline;
 }
@@ -92,14 +96,21 @@ h3 {
 .PSdomain {
     background-color: darkred;
     padding: 10px;
+    border-radius: 9%;
+    border-bottom: white solid 2px;
 }
 .ABCdomain {
     background-color: darkgreen;
     padding: 10px;
+    border-radius: 9%;
+    border-bottom: white solid 2px;
+    
 }
 .Fdomain {
     background-color: darkorange;
     padding: 10px;
+    border-radius: 9%;
+    border-bottom: white solid 2px;
 }
 .btn {
     width: 70px;
