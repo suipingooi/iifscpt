@@ -56,7 +56,9 @@ body {
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
 }
-
+.onwait {
+    margin: 10px;
+}
 /* scoresheet form */
 
 input::placeholder {

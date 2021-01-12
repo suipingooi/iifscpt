@@ -170,6 +170,9 @@ $.ajax(settings).done(function (response) {
         });
     });
     console.log(response); 
+
+    $(".onwait").hide();
+
 });
 
 //SDP Scoresheet Form
