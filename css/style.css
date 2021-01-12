@@ -85,17 +85,29 @@ input::placeholder {
 h3 {
     text-decoration: underline;
 }
+#fat label {
+    font-style: italic;
+    font-size: 15px;
+}
+.PSdomain {
+    background-color: darkred;
+    padding: 10px;
+}
+.ABCdomain {
+    background-color: darkgreen;
+    padding: 10px;
+}
+.Fdomain {
+    background-color: darkorange;
+    padding: 10px;
+}
 .btn {
     width: 70px;
-    margin: 5px;
+    margin: 15px 5px 5px 5px;
     padding: 5px;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-size: small;
-}
-#fat label {
-    font-style: italic;
-    font-size: 15px;
 }
 #btnReset {
     opacity: 60%
@@ -147,10 +159,12 @@ ol {
     font-size: medium;
 }
 .def {
+    text-align: justify;
     font-size: small;
     font-family: 'Monserrat', sans-serif;
 }
 .infoimg {
     margin: 5px;
-    max-width: 200px;
+    border: white solid 2px;
+    width: 150px;
 }
