@@ -76,32 +76,44 @@ $.ajax(settings).done(function (response) {
                                     <canvas id="modalChart"></canvas>
                                 </div>
                                 <div class="container">
-                                    <div class="row">
-                                        <p id="fscore"></p>
+                                    <div class="ABCdomain container">
+                                        <div class="row modrow">
+                                            <h6>Agility, Balance & Coordination</h6>
+                                            <hr>
+                                            <p id="abcscore"></p>
+                                        </div>
+                                        <div class="row modrow">
+                                            <div class="col modalcol" id="abchj"></div>
+                                            <div class="col modalcol" id="abcsp"></div>
+                                            <div class="col modalcol" id="abcsb"></div>
+                                            <div class="col modalcol" id="abcbkvu"></div>
+                                        </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col modalcol" id="fss"></div>
-                                        <div class="col modalcol" id="fsr"></div>
-                                        <div class="col modalcol" id="fle"></div>
-                                        <div class="col modalcol" id="ffs"></div>
+                                    <div class="PSdomain container">
+                                        <div class="row modrow">
+                                            <h6>Power & Strength</h6>
+                                            <hr>
+                                            <p id="psscore"></p>
+                                        </div>
+                                        <div class="row modrow">
+                                            <div class="col modalcol" id="psvj"></div>
+                                            <div class="col modalcol" id="pstj"></div>
+                                            <div class="col modalcol" id="pspu"></div>
+                                            <div class="col modalcol" id="psslb"></div>
+                                        </div>
                                     </div>
-                                    <div class="row">
-                                        <p id="psscore"></p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col modalcol" id="psvj"></div>
-                                        <div class="col modalcol" id="pstj"></div>
-                                        <div class="col modalcol" id="pspu"></div>
-                                        <div class="col modalcol" id="psslb"></div>
-                                    </div>
-                                    <div class="row">
-                                        <p id="abcscore"></p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col modalcol" id="abchj"></div>
-                                        <div class="col modalcol" id="abcsp"></div>
-                                        <div class="col modalcol" id="abcsb"></div>
-                                        <div class="col modalcol" id="abcbkvu"></div>
+                                    <div class="Fdomain container">
+                                        <div class="row modrow">
+                                            <h6>Flexibility</h6>
+                                            <hr>
+                                            <p id="fscore"></p>
+                                        </div>
+                                        <div class="row modrow">
+                                            <div class="col modalcol" id="fss"></div>
+                                            <div class="col modalcol" id="fsr"></div>
+                                            <div class="col modalcol" id="fle"></div>
+                                            <div class="col modalcol" id="ffs"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -137,18 +149,18 @@ $.ajax(settings).done(function (response) {
         var modalABCsb = a.data("abc-sb");
         var modalABCbkvu = a.data("abc-bkvu");
         var modal = $(this);
-        modal.find('.modal-title').text(modalSkaterName + " (AGE " + modalAge + ") " + modalLevel);
-        modal.find('.modal-body #fscore').text("(" + modalFScore + ") Flexibility");
+        modal.find('.modal-title').text(modalSkaterName + " (AGE " + modalAge + ") "  + modalLevel);
+        modal.find('.modal-body #fscore').text("BAND " + modalFScore);
         modal.find('.modal-body #fss').text("Standing Spiral " + modalFss + "cm");
         modal.find('.modal-body #fsr').text("Seated Reach " + modalFsr + "cm");
         modal.find('.modal-body #ffs').text("Front Split " + modalFfsl + "cm(L) " + modalFfsr + "cm(R)");
         modal.find('.modal-body #fle').text("Lumbar Extension " + modalFle + "cm");
-        modal.find('.modal-body #psscore').text("(" + modalPSScore + ") Power & Strength");
+        modal.find('.modal-body #psscore').text("BAND " + modalPSScore);
         modal.find('.modal-body #psvj').text("Vertical Jump " + modalPSvj + "cm");
         modal.find('.modal-body #pstj').text("Tuck Jump " + modalPStj + "count(30s)");
         modal.find('.modal-body #pspu').text("Push Up " + modalPSpu + "count(30s)");
         modal.find('.modal-body #psslb').text("Single Leg Bound " + modalPSslbl + "cm(L) " + modalPSslbr + "cm(R)");
-        modal.find('.modal-body #abcscore').text("(" + modalABCScore + ") Agility, Balance & Coordination");
+        modal.find('.modal-body #abcscore').text("BAND " + modalABCScore);
         modal.find('.modal-body #abchj').text("Hexagon Jump " + modalABChj + "sec");
         modal.find('.modal-body #abcsp').text("Side Plank Hold " + modalABCsp + "sec");
         modal.find('.modal-body #abcsb').text("Spiral Balance " + modalABCsb + "sec");

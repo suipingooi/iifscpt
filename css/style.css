@@ -94,23 +94,26 @@ h3 {
     font-size: 15px;
 }
 .PSdomain {
-    background-color: darkred;
+    background-color: #fb8fc5;
+    color: black;
     padding: 10px;
-    border-radius: 9%;
-    border-bottom: white solid 2px;
+    border-radius: 1%;
+    border-bottom: white solid 1px;
 }
 .ABCdomain {
-    background-color: darkgreen;
+    background-color: #79f2e6;
+    color: black;
     padding: 10px;
-    border-radius: 9%;
-    border-bottom: white solid 2px;
+    border-radius: 1%;
+    border-bottom: white solid 1px;
     
 }
 .Fdomain {
-    background-color: darkorange;
+    background-color: rgb(251, 233, 170);
+    color: black;
     padding: 10px;
-    border-radius: 9%;
-    border-bottom: white solid 2px;
+    border-radius: 1%;
+    border-bottom: white solid 1px;
 }
 .btn {
     width: 70px;
@@ -149,6 +152,9 @@ h3 {
     font-family: 'Monserrat', sans-serif;
     margin: 0px;
 }
+.modrow {
+    margin: 0;
+}
 .modalcol {
     margin-top: 2px;
     margin-bottom: 15px;
@@ -168,6 +174,11 @@ ol {
 }
 .para {
     font-size: medium;
+    font-style: italic;
+}
+h6 {
+    font-weight: 800;
+    font-size: small;
 }
 .def {
     text-align: justify;
