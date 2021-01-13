@@ -163,7 +163,7 @@ $.ajax(settings).done(function (response) {
                     backgroundColor: 'rgba(47, 178, 241, 0.3)',
                     borderWidth: "1",
                     borderColor: "#26B3F1",
-                    data: [12, 12, 12]
+                    data: [modalABCScore, modalFScore, modalPSScore]
                 }]
             },
             options: {}
