@@ -114,7 +114,7 @@ $.ajax(settings).done(function (response) {
         skaterListContent.append(skaterCard);
     }
 
-    $("#dataModal").on("show.bs.modal", function (event) {
+    $("#dataModal").on("shown.bs.modal", function (event) {
         var a = $(event.relatedTarget); 
         var modalSkaterName = a.data("name");
         var modalLevel = a.data("level");
@@ -163,7 +163,7 @@ $.ajax(settings).done(function (response) {
                     backgroundColor: 'rgba(47, 178, 241, 0.3)',
                     borderWidth: "1",
                     borderColor: "#26B3F1",
-                    data: [modalABCScore, modalFScore, modalPSScore]
+                    data: [12, 12, 12]
                 }]
             },
             options: {}
