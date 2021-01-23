@@ -39,6 +39,7 @@ At present, the algorithm is limited to the evaluation of female skaters in the 
 
 ![Interactive Web Design](video)
 <hr>
+
 ![Color Chart](images/iifsc_colorchart.png)<br>
 
 IIFSC base colors were used for uniformity across the site for a strong DNA connection with users to strenghten their relationship with IIFSC. Sport skill component domains are color coded for easy referencing. Color selection is based on color pyschology skewed towards asian associations but adjusted to match IIFSC base colors.
