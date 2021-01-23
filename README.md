@@ -8,13 +8,16 @@ The following are the stakeholders:
 1. Skaters / Skater's Parents
 2. Skater's Coach
 
+![Wireframe](images/wireframe.png)
+
 #### Island Ice Figure Skating Club (IIFSC) - Background
+![Island Ice Figure Skating Club](images/iifsc.webp)
 Island Ice Figure Skating Club is a social ice skating club formed to provide support to our figure skater members and families. IIFSC focuses on building rapport, camaraderie and harmony within the ice skating community by initiating and organizing a variety of activities that promotes such values through fun/play. IIFSC believes that it takes a village to raise a child and aims to create a strong tribe to support each and every individual skater (and family) to reach their individual skating goals. IIFSC logo represents the blades and scratch lines made when a figure skater draws/cuts an image on ice. Both blades were chosen in pink and blue to signify gender neutrality whislt one being larger than the other as a representation of a parent/educator/coach and child/student.
 
 IIFSC is also the home club for a number of Singapore's National Squad team members. This profiling tool was built to provide support for squad athletes; while also providing awareness and opportunity for recreational and competitive skaters geared towards high performance.
 
 #### Sports & Exercise Science - NAPFA - Background
-Singapore launched The National Physical Fitness Award/Assessment (NAPFA) in 1982. It is an assessment of physical fitness conducted biannually which involves the following components:
+Singapore launched The National Physical Fitness Award/Assessment (NAPFA) in 1982. It is an assessment of physical fitness conducted biannually to school going children which involves the following components:
 1. 2.4km Walk-Run
 2. Sit-Ups
 3. Pull-Ups/Push-Ups/Inclined Pull-Ups
@@ -22,13 +25,15 @@ Singapore launched The National Physical Fitness Award/Assessment (NAPFA) in 198
 5. Shuttle Run
 6. Standing Broad Jump
 
-NAPFA standards were used to develop an adapted version for our profiling standards as figure skating demands [sport specific skills](OOI_suiping_FAT_SA1.pdf). The 3 most critical fitness component domains for figure skating are listed below. More information can be found [here](https://suipingooi.github.io/iifscpt/info/) whilst the standards developed can be found [here](scoresheet.xlsx).
+NAPFA standards were used to develop an adapted version for our profiling standards as figure skating demands [sport specific skills](OOI_suiping_FAT_SA1.pdf). The 3 most critical fitness component domains for figure skating are listed below. More information can be found in the [demo site info page](https://suipingooi.github.io/iifscpt/info.html); whilst the standards developed for the evaluation algorithm can be found [here](scoresheet.xlsx).
 ```
 1. Agility, Balance and Coordination
 2. Power and Strength
 3. Flexibility
 ```
-Assessment stations selected took into consideration limited access to sport science lab and equipment. As such, these assessment can be conducted by high level athletes themselves at home or anywhere by a coach with just a measuring tape, marker and a phone with timer.
+Assessment stations selected took into consideration limited access to sport science lab and equipment. As such, these assessment can be conducted by high level athletes themselves (as a gauge) at home or anywhere by a coach with just a measuring tape, marker and a phone with timer.
+
+At present, the algorithm is limited to the evaluation of female skaters in the age range of 7 to 19 and skating at least in the preliminary category.
 
 ### UX - User Experience
 
@@ -38,16 +43,17 @@ Assessment stations selected took into consideration limited access to sport sci
 ![Color Chart](images/iifsc_colorchart.png)
 
 IIFSC base colors were used for uniformity across the site for a strong DNA connection with users to strenghten their relationship with IIFSC. Sport skill component domains are color coded for easy referencing. Color selection is based on color pyschology skewed towards asian associations but adjusted to match IIFSC base colors.
-```
-1. #79F2E6 : Agility, Balance and Coordination
+
+![#79F2E6](images/colors_thumbnail/79f2e6.png) : Agility, Balance and Coordination
     BLUE denotes stability, balance, and harmony
-2. #FF55AA : Power and Strength
+![#FF55AA](images/colors_thumbnail/ff55aa.png) : Power and Strength
     PINK symbolizes unconditional love and support.
     RED symbolizes power and energy.
-3. rgb(251, 233, 170) : Flexibility
+![#FAEAAA](images/colors_thumbnail/faeaaa.png) : Flexibility
     YELLOW is associated with spontainety and flexibility.
-4. BLACK symbolizes elegance and sophistication.
-```
+![BLACK](images/colors_thumbnail/black.png)
+    BLACK symbolizes elegance and sophistication.
+
 
 ![Font Gylps](images/athletedp_fontgylps.png)
 ```
@@ -86,21 +92,23 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 3. Profile card view on index landing page for coaches.
 4. Visual representation of chart and score banding with raw data included.
 5. Color coded domains across the site for easy reference.
-6. IIFSC logo reloads to main index page.
+6. IIFSC logo reloads to main index (profiles) page.
 7. IG account link for recent news and activities by the club.
 
 ### Features left to Implement
 1. A login ID for coaches and skaters to protect individual skater's datasets and privacy as high performance pathway is extremely competitive.
-2. Photo of skaters on profile cards.
-3. 
+2. PhotoID of skaters on profile cards.
+3. Profiling evaluation of <em>male<em> skaters.
+4. Profiling evaluation of adult skaters.
 
 ## Deployment
 
 ## Credits
-Island Ice Figure Skating Club (IIFSC) for all the support provided in the development of this diagnostic tool
+Island Ice Figure Skating Club (IIFSC) for all the support provided in the development of this diagnostic tool. Tutors Arif and Malcolm for guidance with troubleshooting and debugging.
 
 #### Content
-NAPFA
+NAPFA standards extracted from Ministry of Education's Physical Education framework for school going children in Singapore.
+
 #### Media
 1. IIFSC logo from IIFSC 
 2. IIFSC color chart from [AdobeColor](https://color.adobe.com/create/image) retrieved on 31 Dec 2020.
