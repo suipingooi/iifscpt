@@ -56,6 +56,7 @@ IIFSC base colors were used for uniformity across the site for a strong DNA conn
 <img src="images/thumbnail_colors/black.png" alt="black" width="30px">
     <br>BLACK symbolizes elegance and sophistication.
 <hr>
+
 ![Font Gylps](images/athletedp_fontgylps.png)<br>
 Julius Sans One and Montserrat (san-serif family) were selected as font-pair for this project to portray IIFSC's lean yet no nonsense approach towards setting a higher bar for the figure skating community.
 
