@@ -83,7 +83,7 @@ input::placeholder {
     font-size: medium;
 }
 h5 {
-    text-align: center;
+    text-align: start;
     font-weight: 800;
 }
 h3 {
@@ -97,23 +97,16 @@ h3 {
     background-color: #fb8fc5;
     color: black;
     padding: 10px;
-    border-radius: 1%;
-    border-bottom: white solid 1px;
 }
 .ABCdomain {
     background-color: #79f2e6;
     color: black;
     padding: 10px;
-    border-radius: 1%;
-    border-bottom: white solid 1px;
-    
 }
 .Fdomain {
     background-color: rgb(251, 233, 170);
     color: black;
     padding: 10px;
-    border-radius: 1%;
-    border-bottom: white solid 1px;
 }
 .btn {
     width: 70px;
