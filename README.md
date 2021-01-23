@@ -11,7 +11,7 @@ The following are the stakeholders:
 ![Wireframe](images/wireframe.png)
 
 #### Island Ice Figure Skating Club (IIFSC) - Background
-![Island Ice Figure Skating Club](images/iifsc.webp)
+![Island Ice Figure Skating Club](images/iifsc.webp)<br>
 Island Ice Figure Skating Club is a social ice skating club formed to provide support to our figure skater members and families. IIFSC focuses on building rapport, camaraderie and harmony within the ice skating community by initiating and organizing a variety of activities that promotes such values through fun/play. IIFSC believes that it takes a village to raise a child and aims to create a strong tribe to support each and every individual skater (and family) to reach their individual skating goals. IIFSC logo represents the blades and scratch lines made when a figure skater draws/cuts an image on ice. Both blades were chosen in pink and blue to signify gender neutrality whislt one being larger than the other as a representation of a parent/educator/coach and child/student.
 
 IIFSC is also the home club for a number of Singapore's National Squad team members. This profiling tool was built to provide support for squad athletes; while also providing awareness and opportunity for recreational and competitive skaters geared towards high performance.
@@ -101,8 +101,8 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 ### Features left to Implement
 1. A login ID for coaches and skaters to protect individual skater's datasets and privacy as high performance pathway is extremely competitive.
 2. PhotoID of skaters on profile cards.
-3. Profiling evaluation of <em>male<em> skaters.
-4. Profiling evaluation of adult skaters.
+3. Profiling evaluation of <em>male</em> skaters.
+4. Profiling evaluation of <em>adult</em> skaters.
 
 ## Deployment
 
