@@ -16,6 +16,8 @@ Island Ice Figure Skating Club is a social ice skating club formed to provide su
 
 IIFSC is also the home club for a number of Singapore's National Squad team members. This profiling tool was built to provide support for squad athletes; while also providing awareness and opportunity for recreational and competitive skaters geared towards high performance.
 
+<hr>
+
 #### Sports & Exercise Science - NAPFA - Background
 Singapore launched The National Physical Fitness Award/Assessment (NAPFA) in 1982. It is an assessment of physical fitness conducted biannually to school going children which involves the following components:
 1. 2.4km Walk-Run
@@ -38,24 +40,18 @@ At present, the algorithm is limited to the evaluation of female skaters in the 
 ### UX - User Experience
 
 ![Interactive Web Design](video)
+
 <hr>
 
 ![Color Chart](images/iifsc_colorchart.png)<br>
 
 IIFSC base colors were used for uniformity across the site for a strong DNA connection with users to strenghten their relationship with IIFSC. Sport skill component domains are color coded for easy referencing. Color selection is based on color pyschology skewed towards asian associations but adjusted to match IIFSC base colors.
 
-<img src="images/thumbnail_colors/79f2e6.png" alt="#79F2E6" width="30px"> : Agility, Balance and Coordination
-    <br>BLUE denotes stability, balance, and harmony
-    <br>
-<img src="images/thumbnail_colors/ff55aa.png" alt="#FF55AA" width="30px"> : Power and Strength
-    <br>PINK symbolizes unconditional love and support.
-    <br>RED symbolizes power and energy.
-    <br>
-<img src="images/thumbnail_colors/faeaaa.png" alt="#FAEAAA" width="30px"> : Flexibility
-    <br>YELLOW is associated with spontainety and flexibility.
-    <br>
-<img src="images/thumbnail_colors/black.png" alt="black" width="30px">
-    <br>BLACK symbolizes elegance and sophistication.
+<img src="images/thumbnail_colors/79f2e6.png" alt="#79F2E6" width="30px"> BLUE denotes stability, balance, and harmony; selected to represent the component domain of Agility, Balance and Coordination.<br>
+<img src="images/thumbnail_colors/ff55aa.png" alt="#FF55AA" width="30px"> RED symbolizes power and energy. PINK symbolizes unconditional love and support; selected to represent the component domain of Power and Strength.<br>
+<img src="images/thumbnail_colors/faeaaa.png" alt="#FAEAAA" width="30px"> YELLOW is associated with spontainety and flexibility; selected to represent the component domain of Flexibility.<br>
+<img src="images/thumbnail_colors/black.png" alt="black" width="30px"> BLACK symbolizes elegance and sophistication; heavily use and a representation of our graceful and elegant skaters.
+
 <hr>
 
 ![Font Gylps](images/athletedp_fontgylps.png)<br>
@@ -68,13 +64,13 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 1. HTML 5.0 + CSS
 2. Bootstrap 4.0 - CSS & JS [https://getbootstrap.com/](https://getbootstrap.com/)
 3. JQuery.JS [https://jquery.com/](https://jquery.com/)
-4. Restdb.io [https://restdb.io/](https://restdb.io/)
-5. Chart.JS [https://www.chartjs.org/](https://www.chartjs.org/)
+4. Restdb.io [https://restdb.io/](https://restdb.io/) for API database management. 
+5. Chart.JS [https://www.chartjs.org/](https://www.chartjs.org/) for visual / graphical representation of data.
 
 ### Styling
 1. Google Fonts [https://fonts.google.com/](https://fonts.google.com/)
-2. Gimp 2.10 [https://www.gimp.org/](https://www.gimp.org/) 
-3. Adobe Color [https://color.adobe.com/](https://color.adobe.com/)
+2. Gimp 2.10 [https://www.gimp.org/](https://www.gimp.org/) for image manipulation - alpha channels / gamma backgrounds.
+3. Adobe Color [https://color.adobe.com/](https://color.adobe.com/) to extract IIFSC base color chart.
 
 
 ### Testing
@@ -102,7 +98,7 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 | Form submissions - float & integers      | Able to post floats and integers          | No Error |
 | Form submissions - submit                | (API post) Redirects to profiles page     | No Error |
 | Form submissions - reset                 | All field clears                          | No Error |
-
+| Hyperlinks in readme.md                  | All links successfully loads              | No Error |
 <hr>
 
 ## Features
@@ -122,7 +118,7 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 4. Profiling evaluation of <em>adult</em> skaters.
 
 ## Deployment
-Deployed page on github pages for testing. No Issue encountered.
+Deployed page on github pages for testing. No Issue encountered. [https://suipingooi.github.io/iifscpt/](https://suipingooi.github.io/iifscpt/)
 
 ## Credits
 Island Ice Figure Skating Club (IIFSC) for all the support provided in the development of this diagnostic tool. Tutors Arif and Malcolm for guidance with troubleshooting and debugging.
