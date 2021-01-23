@@ -47,9 +47,9 @@ At present, the algorithm is limited to the evaluation of female skaters in the 
 
 IIFSC base colors were used for uniformity across the site for a strong DNA connection with users to strenghten their relationship with IIFSC. Sport skill component domains are color coded for easy referencing. Color selection is based on color pyschology skewed towards asian associations but adjusted to match IIFSC base colors.
 
-<img src="images/thumbnail_colors/79f2e6.png" alt="#79F2E6" width="30px"> BLUE denotes stability, balance, and harmony; selected to represent the component domain of Agility, Balance and Coordination.<br>
-<img src="images/thumbnail_colors/ff55aa.png" alt="#FF55AA" width="30px"> RED symbolizes power and energy. PINK symbolizes unconditional love and support; selected to represent the component domain of Power and Strength.<br>
-<img src="images/thumbnail_colors/faeaaa.png" alt="#FAEAAA" width="30px"> YELLOW is associated with spontainety and flexibility; selected to represent the component domain of Flexibility.<br>
+<img src="images/thumbnail_colors/79f2e6.png" alt="#79F2E6" width="30px"> BLUE denotes stability, balance, and harmony; selected to represent the component domain of **Agility, Balance and Coordination**.<br>
+<img src="images/thumbnail_colors/ff55aa.png" alt="#FF55AA" width="30px"> RED symbolizes power and energy. PINK symbolizes unconditional love and support; selected to represent the component domain of **Power and Strength**.<br>
+<img src="images/thumbnail_colors/faeaaa.png" alt="#FAEAAA" width="30px"> YELLOW is associated with spontainety and flexibility; selected to represent the component domain of **Flexibility**.<br>
 <img src="images/thumbnail_colors/black.png" alt="black" width="30px"> BLACK symbolizes elegance and sophistication; heavily use and a representation of our graceful and elegant skaters.
 
 <hr>
