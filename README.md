@@ -38,9 +38,8 @@ At present, the algorithm is limited to the evaluation of female skaters in the 
 ### UX - User Experience
 
 ![Interactive Web Design](video)
-```
-```
-![Color Chart](images/iifsc_colorchart.png)
+<hr>
+![Color Chart](images/iifsc_colorchart.png)<br>
 
 IIFSC base colors were used for uniformity across the site for a strong DNA connection with users to strenghten their relationship with IIFSC. Sport skill component domains are color coded for easy referencing. Color selection is based on color pyschology skewed towards asian associations but adjusted to match IIFSC base colors.
 
@@ -56,15 +55,10 @@ IIFSC base colors were used for uniformity across the site for a strong DNA conn
     <br>
 <img src="images/thumbnail_colors/black.png" alt="black" width="30px">
     <br>BLACK symbolizes elegance and sophistication.
+<hr>
+![Font Gylps](images/athletedp_fontgylps.png)<br>
+Julius Sans One and Montserrat (san-serif family) were selected as font-pair for this project to portray IIFSC's lean yet no nonsense approach towards setting a higher bar for the figure skating community.
 
-
-![Font Gylps](images/athletedp_fontgylps.png)
-```
-Julius Sans One and Montserrat (san-serif family) were 
-selected as font-pair for this project to portray IIFSC's 
-lean yet no nonsense approach towards setting a higher 
-bar for the figure skating community.
-```
 A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](https://suipingooi.github.io/iifscpt/)
 
 ## Built With 
@@ -88,6 +82,27 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 
 [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) testing was done for css file. No error was found.
 
+| Action                                   | Results                                   | Status   |
+| -----------------------------------------|:-----------------------------------------:|----------|
+| Loading deployed page on iOS mobile      | chart.JS dissapeared when modal reopens   | Fixed    |
+| Loading deployed page on android mobile  | No Issues found                           |          |
+| Loading deployed page on Firefox         | No Issues found                           |          |
+| Loading deployed page on Chrome          | No Issues found                           |          |
+| Loading deployed page on Safari          | chart.JS dissapeared when modal reopens   | Fixed    |
+| Responsive testing on Firefox            | Misalignment of form columns detected     | Fixed    |
+| Responsive testing on Chrome             | No Issues found                           |          |
+| Logo hyperlink                           | Reloads profiles (API get)                | No Error |
+| IG icon hyperlink                        | Opens IIFSC IG page in a new tab          | No Error |
+| Profile card hyperlink                   | Modal pop-up with chart & data            | No Error |
+| Tab navigations                          | Opens file paths                          | No Error |
+| Form submissions - invalid response      | Alert pop-up (invalid response)           | No Error |
+| Form submissions - empty form            | Alert pop-up (invalid response)           | No Error |
+| Form submissions - float & integers      | Able to post floats and integers          | No Error |
+| Form submissions - submit                | (API post) Redirects to profiles page     | No Error |
+| Form submissions - reset                 | All field clears                          | No Error |
+
+<hr>
+
 ## Features
 ### Existing Features
 1. Tab folder navigation bar for easy access.
@@ -105,6 +120,7 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 4. Profiling evaluation of <em>adult</em> skaters.
 
 ## Deployment
+Deployed page on github pages for testing. No Issue encountered.
 
 ## Credits
 Island Ice Figure Skating Club (IIFSC) for all the support provided in the development of this diagnostic tool. Tutors Arif and Malcolm for guidance with troubleshooting and debugging.
