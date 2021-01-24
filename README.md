@@ -8,8 +8,6 @@ The following are the stakeholders:
 1. Skaters / Skater's Parents
 2. Skater's Coach
 
-![Wireframe](images/wireframe.png)
-
 <hr>
 
 #### Island Ice Figure Skating Club (IIFSC) - Background
@@ -35,11 +33,16 @@ NAPFA standards were used to develop an adapted version for our profiling standa
 ```
 Assessment stations selected took into consideration limited access to sport science lab and equipment. As such, these assessment can be conducted by high level athletes themselves (as a gauge) at home or anywhere by a coach with just a measuring tape, marker and a phone with timer.
 
-At present, the algorithm is limited to the evaluation of female skaters in the age range of 7 to 19 and skating at least in the preliminary category.
+At present, the algorithm is limited to the evaluation of female skaters in the age range of 7 to 19 and skating at least in the preliminary category. *info page image guidelines are still pending approval*
 
 ### UX - User Experience
 
-![Interactive Web Design](video)
+Wireframe of the build design includes:
+1. Interactive profiles page with skater card / data.
+2. Assessment page that allows input of data for storage.
+3. Info page that provides guidelines for skaters for self assessment at home.
+
+![Wireframe](images/wireframe.png)
 
 <hr>
 
@@ -57,7 +60,12 @@ IIFSC base colors were used for uniformity across the site for a strong DNA conn
 ![Font Gylps](images/athletedp_fontgylps.png)<br>
 Julius Sans One and Montserrat (san-serif family) were selected as font-pair for this project to portray IIFSC's lean yet no nonsense approach towards setting a higher bar for the figure skating community.
 
+<hr>
+
 A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](https://suipingooi.github.io/iifscpt/)
+
+![Interactive Web Design](videos/iifscpt.mov)
+
 
 ## Built With 
 ### Technologies
@@ -80,7 +88,9 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 
 [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) testing was done for css file. No error was found.
 
-| Action                                   | Results                                   | Status   |
+<hr>
+
+| Action (deployed testing)                | Results                                   | Status   |
 | -----------------------------------------|:-----------------------------------------:|----------|
 | Loading deployed page on iOS mobile      | chart.JS dissapeared when modal reopens   | Fixed    |
 | Loading deployed page on android mobile  | No Issues found                           |          |
@@ -99,11 +109,12 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 | Form submissions - submit                | (API post) Redirects to profiles page     | No Error |
 | Form submissions - reset                 | All field clears                          | No Error |
 | Hyperlinks in readme.md                  | All links successfully loads              | No Error |
+
 <hr>
 
 ## Features
 ### Existing Features
-1. Tab folder navigation bar for easy access.
+1. Tab folder navigation bar for easy access with contrast for active pages.
 2. Info page for parents and aspiring high perfomance athletes for self assessment.
 3. Profile card view on index landing page for coaches.
 4. Visual representation of chart and score banding with raw data included.
