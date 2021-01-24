@@ -90,6 +90,16 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 
 <hr>
 
+| Action (development testing)             | Results                                   | Status   |
+| -----------------------------------------|:-----------------------------------------:|----------|
+| Form submissions - empty form            | API post empty strings                    | Fixed    |
+| Form submissions - invalid data          | API error and redirects with no data      | Fixed    |
+| Algorithm domain(s) function             | Banding error                             | Fixed    |                 
+| Algorithm domain(s) function             | datatype error                            | Fixed    |
+| Loading - on wait div                    | Misalignment                              | Fixed    |
+
+<hr>
+
 | Action (deployed testing)                | Results                                   | Status   |
 | -----------------------------------------|:-----------------------------------------:|----------|
 | Loading deployed page on iOS mobile      | chart.JS dissapeared when modal reopens   | Fixed    |
