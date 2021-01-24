@@ -25,7 +25,7 @@ Singapore launched The National Physical Fitness Award/Assessment (NAPFA) in 198
 5. Shuttle Run
 6. Standing Broad Jump
 
-NAPFA standards were used to develop an adapted version for our profiling standards as figure skating demands [sport specific skills](OOI_suiping_FAT_SA1.pdf). The 3 most critical fitness component domains for figure skating are listed below. More information can be found in the [demo site info page](https://suipingooi.github.io/iifscpt/info.html); whilst the standards developed for the evaluation algorithm can be found [here](scoresheet.xlsx).
+NAPFA standards were used to develop an adapted version for our profiling standards as figure skating demands [sport specific skills](OOI_suiping_FAT_SA1.pdf). The 3 most critical fitness component domains for figure skating are listed below. More information can be found in the [demo site info page](https://suipingooi.github.io/iifscpt/info.html); whilst the standards developed for the **evaluation algorithm** can be found [here](scoresheet.xlsx).
 ```
 1. Agility, Balance and Coordination
 2. Power and Strength
@@ -33,7 +33,7 @@ NAPFA standards were used to develop an adapted version for our profiling standa
 ```
 Assessment stations selected took into consideration limited access to sport science lab and equipment. As such, these assessment can be conducted by high level athletes themselves (as a gauge) at home or anywhere by a coach with just a measuring tape, marker and a phone with timer.
 
-At present, the algorithm is limited to the evaluation of female skaters in the age range of 7 to 19 and skating at least in the preliminary category. *info page image guidelines are still pending approval*
+**At present, the algorithm is limited to the evaluation of female skaters in the age range of 7 to 19 and skating at least in the preliminary category. *info page image guidelines are still pending approval***
 
 ### UX - User Experience
 
@@ -139,7 +139,7 @@ A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](htt
 4. Profiling evaluation of <em>adult</em> skaters.
 
 ## Deployment
-Deployed page on github pages for testing. No Issue encountered. [https://suipingooi.github.io/iifscpt/](https://suipingooi.github.io/iifscpt/)
+Deployed page on github pages for testing. No Issue encountered. [https://suipingooi.github.io/iifscpt/](https://suipingooi.github.io/iifscpt/). Deployment on github pages is straightforward utilizing the settings page and built from main branch without theme or custom domain as it is still a demo site pending assessment and approval for actual active deployment on IIFSC's main site.
 
 ## Credits
 Island Ice Figure Skating Club (IIFSC) for all the support provided in the development of this diagnostic tool. Tutors Arif and Malcolm for guidance with troubleshooting and debugging.
