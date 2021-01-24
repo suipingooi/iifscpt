@@ -64,7 +64,7 @@ Julius Sans One and Montserrat (san-serif family) were selected as font-pair for
 
 A demo of the site can be found here [https://suipingooi.github.io/iifscpt/](https://suipingooi.github.io/iifscpt/)
 
-![Interactive Web Design](videos/iifscptdemo.mov)
+![Interactive Web Design](videos/iifscpt480.gif)
 
 
 ## Built With 
